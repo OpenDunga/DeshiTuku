@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTAgeInputViewController : UIViewController
+@interface DTAgeInputViewController : UIViewController <UITextFieldDelegate>
 
 @property(readwrite, nonatomic) IBOutlet UILabel *ageLabel;
+@property(readwrite, nonatomic) IBOutlet UITextField *textField;
 
 @end

@@ -349,6 +349,7 @@
 				GCC_PREFIX_HEADER = "DeshiTuku/DeshiTuku-Prefix.pch";
 				INFOPLIST_FILE = "DeshiTuku/DeshiTuku-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/lib/FPNumberPadView\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -361,6 +362,7 @@
 				GCC_PREFIX_HEADER = "DeshiTuku/DeshiTuku-Prefix.pch";
 				INFOPLIST_FILE = "DeshiTuku/DeshiTuku-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/lib/FPNumberPadView\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

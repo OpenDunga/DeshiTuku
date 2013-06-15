@@ -8,7 +8,7 @@
 
 #import "DTUserManager.h"
 
-static NSString *kCurrentUserKey = @"";
+static NSString *kCurrentUserKey = @"myAccount";
 
 @implementation DTUserManager
 
