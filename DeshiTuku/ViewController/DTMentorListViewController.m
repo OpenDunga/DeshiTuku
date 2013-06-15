@@ -7,6 +7,7 @@
 //
 
 #import "DTMentorListViewController.h"
+#import "DTMentorApplyViewController.h"
 #import "DTUserManager.h"
 
 @interface DTMentorListViewController ()
@@ -59,5 +60,15 @@
 }
 
 #pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DTUser *user = [[[DTUserManager sharedManager] mentors] objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"DTMentorApply" sender:user];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DTMentorApplyViewController *apply = [segue destinationViewController];
+    apply.mentor = sender;
+}
 
 @end
