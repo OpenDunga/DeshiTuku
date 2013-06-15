@@ -7,27 +7,44 @@
 //
 
 #import "DTUser.h"
+#import "UIImage+UIImage_HexString.h"
 
 @implementation DTUser
 
 #pragma mark NSCoding
+
++ (DTUser *)userWithDictionary:(NSDictionary *)dict {
+    DTUser *user = [[DTUser alloc] init];
+    user.primaryKey = [dict[@"pk"] intValue];
+    user.topicName = dict[@"topic"];
+    user.age = [dict[@"age"] intValue];
+    user.profile = dict[@"profile"];
+    user.averageAge = [dict[@"age_ave"] intValue];
+    user.title = dict[@"title"];
+    user.signature = [UIImage imageWithHexString:dict[@"signiture"]];
+    return user;
+}
 
 - (id)init {
     self = [super init];
     if (self) {
         self.profile = @"";
         self.email = @"";
+        self.title = @"";
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder*)coder {
+    [coder encodeInteger:self.primaryKey forKey:@"primaryKey"];
     [coder encodeInteger:self.age forKey:@"age"];
+    [coder encodeInteger:self.averageAge forKey:@"averageAge"];
     [coder encodeObject:self.userID forKey:@"userID"];
     [coder encodeObject:self.email forKey:@"email"];
     // ToDo 画像のNSData化
     NSData *data = UIImagePNGRepresentation(self.signature);
     [coder encodeObject:data forKey:@"signature"];
+    [coder encodeObject:self.title forKey:@"title"];
     [coder encodeObject:self.profile forKey:@"profile"];
     [coder encodeInteger:self.topicID forKey:@"topicID"];
     [coder encodeObject:self.topicName forKey:@"topicName"];
@@ -36,11 +53,14 @@
 - (id)initWithCoder:(NSCoder*)decoder {
     self = [super init];
     if (self) {
+        self.primaryKey = [decoder decodeIntegerForKey:@"primaryKey"];
         self.age = [decoder decodeIntegerForKey:@"age"];
+        self.averageAge = [decoder decodeIntegerForKey:@"averageAge"];
         self.email = [decoder decodeObjectForKey:@"email"];
         self.userID = [decoder decodeObjectForKey:@"userID"];
         NSData *data = [decoder decodeObjectForKey:@"signature"];
         self.signature = [UIImage imageWithData:data];
+        self.title = [decoder decodeObjectForKey:@"title"];
         self.profile = [decoder decodeObjectForKey:@"profile"];
         self.topicID = [decoder decodeIntegerForKey:@"topicID"];
         self.topicName = [decoder decodeObjectForKey:@"topicName"];

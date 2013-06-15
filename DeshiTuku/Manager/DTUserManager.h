@@ -18,5 +18,8 @@
 - (DTUser *)loadUser;
 - (void)registerUser:(DTUser *)user;
 - (void)resetUser;
+- (void)fetchMenterList;
+
+@property (readwrite, nonatomic) NSArray *mentors;
 
 @end

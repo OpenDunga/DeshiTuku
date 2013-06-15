@@ -33,6 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateStartButton];
+    [[DTUserManager sharedManager] fetchMenterList];
 }
 
 - (void)didReceiveMemoryWarning

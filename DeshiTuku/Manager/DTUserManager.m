@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 
 static NSString *kCurrentUserKey = @"myAccount";
+static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
 
 @implementation DTUserManager
 
@@ -44,7 +45,7 @@ static NSString *kCurrentUserKey = @"myAccount";
 }
 
 - (void)registerUser:(DTUser *)user {
-    NSURL *url = [NSURL URLWithString:@"http://deshitsuku.dotdister.net/"];
+    NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSMutableURLRequest *request;
     if (user.type == DTUserTypeMentor) {
@@ -65,8 +66,10 @@ static NSString *kCurrentUserKey = @"myAccount";
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                                                             NSString *uid = ((NSDictionary*)JSON)[@"uid"];
+                                                                                            NSInteger primaryKey = [((NSDictionary *)JSON)[@"pk"] intValue];
                                                                                             user.userID = uid;
-                                                                                            NSLog(@"uid = %@", user.userID);
+                                                                                            user.primaryKey = primaryKey;
+                                                                                            NSLog(@"uid = %@, pk = %d", user.userID, user.primaryKey);
                                                                                             NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
                                                                                             NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
                                                                                             [ud setObject:data forKey:kCurrentUserKey];
@@ -80,6 +83,28 @@ static NSString *kCurrentUserKey = @"myAccount";
 - (void)resetUser {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:nil forKey:kCurrentUserKey];
+}
+
+- (void)fetchMenterList {
+    NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSURLRequest *request = [httpClient requestWithMethod:@"GET"
+                                                     path:@"mentors.php"
+                                               parameters:nil];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            NSMutableArray *mentors = [NSMutableArray array];
+                                                                                            for (NSDictionary *dict in JSON) {
+                                                                                                DTUser *user = [DTUser userWithDictionary:dict];
+                                                                                                [mentors addObject:user];
+                                                                                            }
+                                                                                            self.mentors = mentors;
+    }
+                                                                                        failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                            NSLog(@"fail");
+    }];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:operation];
 }
 
 @end

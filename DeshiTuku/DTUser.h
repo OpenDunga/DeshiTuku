@@ -16,10 +16,14 @@ typedef enum {
 @interface DTUser : NSObject <NSCoding>
 
 - (NSString *)sinatureBytes;
++ (DTUser *)userWithDictionary:(NSDictionary *)dict;
 
+@property(readwrite) NSInteger primaryKey;
 @property(readwrite) NSInteger age;
+@property(readwrite) NSInteger averageAge;
 @property(readwrite) NSString *userID;
 @property(readwrite) NSString *email;
+@property(readwrite, copy) NSString *title;
 @property(readwrite, copy) UIImage *signature;
 @property(readwrite, copy) NSString *profile;
 @property(readwrite) NSInteger topicID;

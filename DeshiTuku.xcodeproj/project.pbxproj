@@ -15,6 +15,7 @@
 		074CB308176C93FD0090E4BE /* mentor_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB307176C93FD0090E4BE /* mentor_list.png */; };
 		074CB30B176C946F0090E4BE /* DTMentorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB30A176C946E0090E4BE /* DTMentorListViewController.m */; };
 		074CB30E176C96350090E4BE /* DTStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB30D176C96350090E4BE /* DTStartViewController.m */; };
+		074CB311176CA30D0090E4BE /* UIImage+UIImage_HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB310176CA30C0090E4BE /* UIImage+UIImage_HexString.m */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -64,6 +65,8 @@
 		074CB30A176C946E0090E4BE /* DTMentorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMentorListViewController.m; sourceTree = "<group>"; };
 		074CB30C176C96350090E4BE /* DTStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStartViewController.h; sourceTree = "<group>"; };
 		074CB30D176C96350090E4BE /* DTStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStartViewController.m; sourceTree = "<group>"; };
+		074CB30F176CA30C0090E4BE /* UIImage+UIImage_HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImage_HexString.h"; sourceTree = "<group>"; };
+		074CB310176CA30C0090E4BE /* UIImage+UIImage_HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImage_HexString.m"; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,6 +179,8 @@
 				07A71F55176C13F800BA8EF6 /* DTViewController.m */,
 				07A71F40176C13F800BA8EF6 /* Supporting Files */,
 				1AB895E064955699605B453F /* ViewController */,
+				074CB30F176CA30C0090E4BE /* UIImage+UIImage_HexString.h */,
+				074CB310176CA30C0090E4BE /* UIImage+UIImage_HexString.m */,
 			);
 			path = DeshiTuku;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				07A71FC8176C749400BA8EF6 /* DTEmailInputViewController.m in Sources */,
 				074CB30B176C946F0090E4BE /* DTMentorListViewController.m in Sources */,
 				074CB30E176C96350090E4BE /* DTStartViewController.m in Sources */,
+				074CB311176CA30D0090E4BE /* UIImage+UIImage_HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
