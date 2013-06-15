@@ -38,7 +38,9 @@
 
 - (void)nextButtonPressed:(id)sender {
     DTUserManager *manager = [DTUserManager sharedManager];
-    [manager registerUser:manager.currentUser];
+    [manager registerUser:manager.currentUser success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        [self performSegueWithIdentifier:@"DTDiscipleRegisterSegue" sender:self];
+    }];
 }
 
 #pragma mark UITextFieldDelegate

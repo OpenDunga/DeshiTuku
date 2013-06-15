@@ -18,6 +18,9 @@
 		074CB311176CA30D0090E4BE /* UIImage+UIImage_HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB310176CA30C0090E4BE /* UIImage+UIImage_HexString.m */; };
 		074CB313176CACC10090E4BE /* back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB312176CACC10090E4BE /* back_white.png */; };
 		074CB316176CC02B0090E4BE /* DTMentorApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB315176CC02B0090E4BE /* DTMentorApplyViewController.m */; };
+		074CB31D176CC4110090E4BE /* apply_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB31B176CC4110090E4BE /* apply_selected.png */; };
+		074CB31E176CC4110090E4BE /* apply.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB31C176CC4110090E4BE /* apply.png */; };
+		074CB320176CC4320090E4BE /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB31F176CC4320090E4BE /* scroll.png */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -72,6 +75,9 @@
 		074CB312176CACC10090E4BE /* back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_white.png; sourceTree = "<group>"; };
 		074CB314176CC02B0090E4BE /* DTMentorApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMentorApplyViewController.h; sourceTree = "<group>"; };
 		074CB315176CC02B0090E4BE /* DTMentorApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMentorApplyViewController.m; sourceTree = "<group>"; };
+		074CB31B176CC4110090E4BE /* apply_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apply_selected.png; sourceTree = "<group>"; };
+		074CB31C176CC4110090E4BE /* apply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apply.png; sourceTree = "<group>"; };
+		074CB31F176CC4320090E4BE /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll.png; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -252,6 +258,9 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				074CB31B176CC4110090E4BE /* apply_selected.png */,
+				074CB31C176CC4110090E4BE /* apply.png */,
+				074CB31F176CC4320090E4BE /* scroll.png */,
 				074CB312176CACC10090E4BE /* back_white.png */,
 				074CB307176C93FD0090E4BE /* mentor_list.png */,
 				074CB303176C89B20090E4BE /* next_pressed.png */,
@@ -374,6 +383,9 @@
 				074CB306176C89B20090E4BE /* next.png in Resources */,
 				074CB308176C93FD0090E4BE /* mentor_list.png in Resources */,
 				074CB313176CACC10090E4BE /* back_white.png in Resources */,
+				074CB31D176CC4110090E4BE /* apply_selected.png in Resources */,
+				074CB31E176CC4110090E4BE /* apply.png in Resources */,
+				074CB320176CC4320090E4BE /* scroll.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

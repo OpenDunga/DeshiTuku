@@ -487,6 +487,7 @@
                     <navigationItem key="navigationItem" id="Pgm-rM-MX6"/>
                     <connections>
                         <outlet property="textField" destination="VPW-eq-zf7" id="k8t-Ax-HIS"/>
+                        <segue destination="oe6-MX-RbG" kind="push" identifier="DTDiscipleRegisterSegue" id="S2h-le-32W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPk-eH-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,9 +656,41 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="scroll.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Oy-0N-W1w"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-pS-gqy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZOI-0K-dEm"/>
+                                    <constraint firstAttribute="width" constant="500" id="kwe-PG-5qb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="apply.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="apply_selected.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onApplyButtonPressed:" destination="Zvg-Qh-LLs" eventType="touchUpInside" id="OH1-Wc-eP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-DG-Uxy">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="Zvg-Qh-LLs" eventType="touchUpInside" id="nIk-Dw-fyd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kvq-pS-gqy" firstAttribute="centerX" secondItem="ZN8-dM-i6t" secondAttribute="centerX" type="default" id="0KU-ee-OdZ"/>
                             <constraint firstItem="Gp9-kT-czN" firstAttribute="bottom" secondItem="1MH-MO-vJ9" secondAttribute="bottom" type="default" id="252-xm-5kT"/>
                             <constraint firstItem="LOH-sm-SBM" firstAttribute="top" secondItem="n6S-4g-j1J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5UC-eN-tXh"/>
                             <constraint firstItem="ZN8-dM-i6t" firstAttribute="top" secondItem="qOT-1A-PFx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5tZ-Ml-RC5"/>
@@ -669,7 +702,12 @@
                             <constraint firstItem="Gp9-kT-czN" firstAttribute="trailing" secondItem="1MH-MO-vJ9" secondAttribute="trailing" type="default" id="ej0-jh-VE1"/>
                             <constraint firstItem="qOT-1A-PFx" firstAttribute="leading" secondItem="1MH-MO-vJ9" secondAttribute="leading" constant="118" id="hR6-El-4aT"/>
                             <constraint firstItem="LOH-sm-SBM" firstAttribute="trailing" secondItem="n6S-4g-j1J" secondAttribute="trailing" type="default" id="mhX-rp-4DU"/>
+                            <constraint firstItem="eSb-DG-Uxy" firstAttribute="leading" secondItem="8Oy-0N-W1w" secondAttribute="leading" type="default" id="p7I-Q8-8Yo"/>
+                            <constraint firstItem="8Oy-0N-W1w" firstAttribute="top" secondItem="1MH-MO-vJ9" secondAttribute="top" constant="479" id="qbo-xV-ejD"/>
                             <constraint firstItem="qOT-1A-PFx" firstAttribute="top" secondItem="1MH-MO-vJ9" secondAttribute="top" constant="84" id="rzh-g3-nmo"/>
+                            <constraint firstAttribute="bottom" secondItem="Kvq-pS-gqy" secondAttribute="bottom" constant="290" id="vLH-ON-uBX"/>
+                            <constraint firstAttribute="bottom" secondItem="eSb-DG-Uxy" secondAttribute="bottom" constant="51" id="w47-32-oZa"/>
+                            <constraint firstItem="8Oy-0N-W1w" firstAttribute="centerX" secondItem="Gp9-kT-czN" secondAttribute="centerX" type="default" id="y0g-Y9-aoD"/>
                             <constraint firstAttribute="trailing" secondItem="g7I-DD-hwq" secondAttribute="trailing" constant="117" id="ytd-Si-8Sg"/>
                             <constraint firstItem="ZN8-dM-i6t" firstAttribute="trailing" secondItem="LOH-sm-SBM" secondAttribute="trailing" type="default" id="zYx-wa-6vm"/>
                         </constraints>
@@ -697,6 +735,8 @@
     </scenes>
     <resources>
         <image name="age_caption.png" width="898" height="89"/>
+        <image name="apply.png" width="1000" height="200"/>
+        <image name="apply_selected.png" width="1000" height="200"/>
         <image name="back.png" width="1536" height="2048"/>
         <image name="back_scroll.png" width="1536" height="2048"/>
         <image name="back_white.png" width="668" height="822"/>
@@ -708,64 +748,9 @@
         <image name="next.png" width="375" height="386"/>
         <image name="next_pressed.png" width="375" height="386"/>
         <image name="profile_caption.png" width="908" height="70"/>
+        <image name="scroll.png" width="674" height="369"/>
         <image name="topic.png" width="1536" height="2048"/>
     </resources>
-    <classes>
-        <class className="DTAgeInputViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTAgeInputViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DTEmailInputViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTEmailInputViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="nextButtonPressed:"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DTMentorApplyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTMentorApplyViewController.h"/>
-        </class>
-        <class className="DTMentorListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTMentorListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DTProfileInputViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTProfileInputViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onNextPressed:"/>
-                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="DTStartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTStartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onResetButtonPressed:"/>
-                <relationship kind="action" name="onStartButtonPressed:"/>
-                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="DTTopicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTTopicViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="JBSignatureController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JBSignatureController.h"/>
-            <relationships>
-                <relationship kind="action" name="nextButtonPressed:"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -773,5 +758,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="EJh-Hi-YPp"/>
+        <segue reference="S2h-le-32W"/>
     </inferredMetricsTieBreakers>
 </document>

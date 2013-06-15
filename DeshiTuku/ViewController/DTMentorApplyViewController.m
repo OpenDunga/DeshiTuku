@@ -48,4 +48,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)onApplyButtonPressed:(id)sender {
+    DTUserManager *manager = [DTUserManager sharedManager];
+    [manager applyMentor:self.mentor
+                disciple:[manager currentUser]
+                 success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                     [self.navigationController popViewControllerAnimated:YES];
+                 }];
+}
+
+- (void)onBackButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

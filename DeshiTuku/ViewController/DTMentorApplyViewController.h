@@ -13,4 +13,7 @@
 
 @property(readwrite, nonatomic) DTUser *mentor;
 
+- (IBAction)onApplyButtonPressed:(id)sender;
+- (IBAction)onBackButtonPressed:(id)sender;
+
 @end

@@ -44,7 +44,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     return _currentUser;
 }
 
-- (void)registerUser:(DTUser *)user {
+- (void)registerUser:(DTUser *)user success:(void (^)(NSURLRequest *, NSHTTPURLResponse *, id))success {
     NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSMutableURLRequest *request;
@@ -73,8 +73,28 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                                                                             NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
                                                                                             NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
                                                                                             [ud setObject:data forKey:kCurrentUserKey];
+                                                                                            success(request, response, JSON);
                                                                                         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                                                                             NSLog(@"failed");
+                                                                                        }];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:operation];
+}
+
+- (void)applyMentor:(DTUser *)mentor disciple:(DTUser *)disciple success:(void (^)(NSURLRequest *, NSHTTPURLResponse *, id))success {
+    NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                     path:@"disciple_apply.php"
+                                               parameters:@{@"disciple_uid" : disciple.userID,
+                             @"mentor_pk" : [NSNumber numberWithInt:mentor.primaryKey]}];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            NSLog(@"success");
+                                                                                            success(request, response, JSON);
+                                                                                        }
+                                                                                        failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                            NSLog(@"fail");
                                                                                         }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
@@ -85,7 +105,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     [ud setObject:nil forKey:kCurrentUserKey];
 }
 
-- (void)fetchMenterList {
+- (void)fetchMentorList {
     NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSURLRequest *request = [httpClient requestWithMethod:@"GET"

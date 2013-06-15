@@ -43,7 +43,8 @@
 
 - (IBAction)onNextPressed:(id)sender {
     DTUserManager *manager = [DTUserManager sharedManager];
-    [manager registerUser:manager.currentUser];
+    [manager registerUser:manager.currentUser success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    }];
 }
 
 #pragma mark UITextViewDelegate
