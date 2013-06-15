@@ -7,6 +7,7 @@
 //
 
 #import "DTMentorListViewController.h"
+#import "DTUserManager.h"
 
 @interface DTMentorListViewController ()
 
@@ -38,11 +39,23 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [[[DTUserManager sharedManager] mentors] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MentorCell"];
+    DTUser *user = [[[DTUserManager sharedManager] mentors] objectAtIndex:indexPath.row];
+    UIImageView *signatureView = (UIImageView *)[cell viewWithTag:1];
+    UIImageView *titleView = (UIImageView *)[cell viewWithTag:2];
+    UILabel *ageLabel = (UILabel *)[cell viewWithTag:3];
+    UILabel *profileLabel = (UILabel *)[cell viewWithTag:4];
+    
+    [signatureView setImage:user.signature];
+    [ageLabel setText:[NSString stringWithFormat:@"%d", user.age]];
+    [profileLabel setText:user.profile];
+    profileLabel.text = user.profile;
+    
+    return cell;
 }
 
 #pragma mark UITableViewDelegate
