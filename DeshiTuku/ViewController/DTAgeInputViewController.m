@@ -31,7 +31,7 @@
     [[DTTopicManager sharedManager] fetchTopicList];
     self.textField.keyboardType = UIKeyboardTypeNumberPad;
     [self.textField becomeFirstResponder];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,18 +42,29 @@
 #pragma mark UITextField
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    //NSInteger age = [string integerValue];
-    _ageLabel.text = string;
-    if ([string isEqualToString:@"\n"]) {
-	[textField resignFirstResponder];
-        return NO;
+    BOOL result = YES;
+    // 例えば文字数を 30 文字に制限します。
+    NSUInteger maxLength = 3;
+    // iPhone の Return キーが押された場合は "\n" が渡されてくるところに注意します。
+    
+    if ([string compare:@"\n"] == 0) {
+        // Return キーが押された場合は、文字数に限らず、それを受け入れるようにしておきます。
+        result = YES;
+    } else {
+        // Return キーではない場合には、最大文字数を超えないときだけ、受け入れるようにします。
+        NSUInteger textLength = textField.text.length;
+        NSUInteger rangeLength = range.length;
+        NSUInteger stringLength = string.length;
+        NSUInteger length = textLength - rangeLength + stringLength;
+        result = (length <= maxLength);
     }
-    return YES;
+    return result;
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     // ToDo 数字チェック
-    NSString *ageString = self.ageLabel.text;
+    NSString *ageString = textField.text;
     NSError *error = nil;
     NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"^[0-9]+$" options:0 error:&error];
     NSArray *arr = [regexp matchesInString:ageString options:0 range:NSMakeRange(0, ageString.length)];
@@ -61,7 +72,13 @@
         int age = [ageString integerValue];
         DTUser *user = [[DTUserManager sharedManager] currentUser];
         user.age = age;
-        [self performSegueWithIdentifier:@"DTSignatureInputSegue" sender:self];
+        if (age >= 40) { // 先生
+            user.type = DTUserTypeMentor;
+            [self performSegueWithIdentifier:@"DTMentorSegue" sender:self];
+        } else {
+            user.type = DTUserTypeDisciple;
+            [self performSegueWithIdentifier:@"DTDiscipleSegue" sender:self];
+        }
         return YES;
     }
     return NO;
