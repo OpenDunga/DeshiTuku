@@ -8,18 +8,17 @@
 
 #import "JBSignatureController.h"
 #import "JBSignatureView.h"
-
-
+#import "DTSignatureInputDelegate.h"
 
 #pragma mark - *** Private Interface ***
 
 @interface JBSignatureController() {
 @private
-	__strong JBSignatureView *signatureView_;
-	__strong UIImageView *signaturePanelBackgroundImageView_;
-	__strong UIImage *portraitBackgroundImage_, *landscapeBackgroundImage_;
-	__strong UIButton *confirmButton_, *cancelButton_;
-	__weak id<JBSignatureControllerDelegate> delegate_;
+    __strong JBSignatureView *signatureView_;
+    __strong UIImageView *signaturePanelBackgroundImageView_;
+    __strong UIImage *portraitBackgroundImage_, *landscapeBackgroundImage_;
+    __strong UIButton *confirmButton_, *cancelButton_;
+    __strong id<JBSignatureControllerDelegate> delegate_;
 }
 
 // The view responsible for handling signature sketching
@@ -56,12 +55,12 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	
-	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-	}
-	
-	return self;
-	
+    
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+    }
+    
+    return self;
+    
 }
 
 /**
@@ -69,7 +68,7 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(id)init {
-	return [self initWithNibName:nil bundle:nil];
+    return [self initWithNibName:nil bundle:nil];
 }
 
 
@@ -82,37 +81,37 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)loadView {
-	
-	self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-	
-	// Background images
-	self.portraitBackgroundImage = [UIImage imageNamed:@"bg-signature-portrait"];
-	self.landscapeBackgroundImage = [UIImage imageNamed:@"bg-signature-landscape"];
-	self.signaturePanelBackgroundImageView = [[UIImageView alloc] initWithImage:self.portraitBackgroundImage];
-	
-	// Signature view
-	self.signatureView = [[JBSignatureView alloc] init];
-	
-	// Confirm
-	self.confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.confirmButton setTitle:@"Confirm" forState:UIControlStateNormal];
-	[self.confirmButton sizeToFit];
-	[self.confirmButton setFrame:CGRectMake(self.view.frame.size.width - self.confirmButton.frame.size.width - 10.0f, 
-											10.0f, 
-											self.confirmButton.frame.size.width, 
-											self.confirmButton.frame.size.height)];
-	[self.confirmButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
-	
-	// Cancel
-	self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
-	[self.cancelButton sizeToFit];
-	[self.cancelButton setFrame:CGRectMake(10.0f, 
-										   10.0f, 
-										   self.cancelButton.frame.size.width, 
-										   self.cancelButton.frame.size.height)];
-	[self.cancelButton setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
-	
+    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    self.delegate = [[DTSignatureInputDelegate alloc] init];
+    
+    // Background images
+    self.portraitBackgroundImage = [UIImage imageNamed:@"bg-signature-portrait"];
+    self.landscapeBackgroundImage = [UIImage imageNamed:@"bg-signature-landscape"];
+    self.signaturePanelBackgroundImageView = [[UIImageView alloc] initWithImage:self.portraitBackgroundImage];
+    
+    // Signature view
+    self.signatureView = [[JBSignatureView alloc] init];
+    
+    // Confirm
+    self.confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.confirmButton setTitle:@"Confirm" forState:UIControlStateNormal];
+    [self.confirmButton sizeToFit];
+    [self.confirmButton setFrame:CGRectMake(self.view.frame.size.width - self.confirmButton.frame.size.width - 10.0f,
+                                            10.0f,
+                                            self.confirmButton.frame.size.width,
+                                            self.confirmButton.frame.size.height)];
+    [self.confirmButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
+    
+    // Cancel
+    self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [self.cancelButton sizeToFit];
+    [self.cancelButton setFrame:CGRectMake(10.0f,
+                                           10.0f,
+                                           self.cancelButton.frame.size.width,
+                                           self.cancelButton.frame.size.height)];
+    [self.cancelButton setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
+    
 }
 
 /**
@@ -120,32 +119,32 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)viewDidLoad {
-	
-	// Background Image
-	[self.signaturePanelBackgroundImageView setFrame:self.view.bounds];
-	[self.signaturePanelBackgroundImageView setContentMode:UIViewContentModeTopLeft];
-	[self.view addSubview:self.signaturePanelBackgroundImageView];
-	
-	// Signature View
-	[self.signatureView setFrame:self.view.bounds];
-	[self.view addSubview:self.signatureView];
-	
-	// Buttons
-	[self.view addSubview:self.cancelButton];
-	[self.view addSubview:self.confirmButton];
-	
-	// Button actions
-	[self.confirmButton addTarget:self action:@selector(didTapCanfirmButton) forControlEvents:UIControlEventTouchUpInside];
-	[self.cancelButton addTarget:self action:@selector(didTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
-	
+    
+    // Background Image
+    [self.signaturePanelBackgroundImageView setFrame:self.view.bounds];
+    [self.signaturePanelBackgroundImageView setContentMode:UIViewContentModeTopLeft];
+    [self.view addSubview:self.signaturePanelBackgroundImageView];
+    
+    // Signature View
+    [self.signatureView setFrame:self.view.bounds];
+    [self.view addSubview:self.signatureView];
+    
+    // Buttons
+    [self.view addSubview:self.cancelButton];
+    [self.view addSubview:self.confirmButton];
+    
+    // Button actions
+    [self.confirmButton addTarget:self action:@selector(didTapCanfirmButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.cancelButton addTarget:self action:@selector(didTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 /**
  * Support for different orientations
  * @author Jesse Bunch
  **/
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation { 	
-	return YES;
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return YES;
 }
 
 /**
@@ -153,14 +152,14 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-	
-	if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-		toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-		[self.signaturePanelBackgroundImageView setImage:self.landscapeBackgroundImage];
-	} else {
-		[self.signaturePanelBackgroundImageView setImage:self.portraitBackgroundImage];
-	}
-	
+    
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        [self.signaturePanelBackgroundImageView setImage:self.landscapeBackgroundImage];
+    } else {
+        [self.signaturePanelBackgroundImageView setImage:self.portraitBackgroundImage];
+    }
+    
 }
 
 /**
@@ -168,8 +167,8 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-	[self.signatureView setFrame:self.view.bounds];
-	[self.signatureView setNeedsDisplay];
+    [self.signatureView setFrame:self.view.bounds];
+    [self.signatureView setNeedsDisplay];
 }
 
 
@@ -180,12 +179,12 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)didTapCanfirmButton {
-	
-	if (self.delegate && [self.delegate respondsToSelector:@selector(signatureConfirmed:signatureController:)]) {
-		UIImage *signatureImage = [self.signatureView getSignatureImage];
-		[self.delegate signatureConfirmed:signatureImage signatureController:self];
-	}
-	
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(signatureConfirmed:signatureController:)]) {
+        UIImage *signatureImage = [self.signatureView getSignatureImage];
+        [self.delegate signatureConfirmed:signatureImage signatureController:self];
+    }
+    
 }
 
 /**
@@ -193,11 +192,11 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)didTapCancelButton {
-	
-	if (self.delegate && [self.delegate respondsToSelector:@selector(signatureCancelled:)]) {
-		[self.delegate signatureCancelled:self];
-	}
-	
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(signatureCancelled:)]) {
+        [self.delegate signatureCancelled:self];
+    }
+    
 }
 
 #pragma mark - *** Public Methods ***
@@ -208,13 +207,13 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)clearSignature {
-	
-	if (self.delegate && [self.delegate respondsToSelector:@selector(signatureCleared:signatureController:)]) {
-		UIImage *signatureImage = [self.signatureView getSignatureImage];
-		[self.delegate signatureCleared:signatureImage signatureController:self];
-	}
-	
-	[self.signatureView clearSignature];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(signatureCleared:signatureController:)]) {
+        UIImage *signatureImage = [self.signatureView getSignatureImage];
+        [self.delegate signatureCleared:signatureImage signatureController:self];
+    }
+    
+    [self.signatureView clearSignature];
 }
 
 

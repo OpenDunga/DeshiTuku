@@ -21,7 +21,7 @@
 @property(nonatomic,strong) UIButton *confirmButton, *cancelButton;
 
 // Delegate
-@property(nonatomic,weak) id<JBSignatureControllerDelegate> delegate;
+@property(nonatomic,strong) id<JBSignatureControllerDelegate> delegate;
 
 // Clear the signature
 -(void)clearSignature;

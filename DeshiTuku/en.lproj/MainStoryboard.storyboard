@@ -95,7 +95,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="mvg-bm-Re2" id="Xje-sm-i4d"/>
                         <outlet property="textField" destination="k0x-cQ-LHV" id="qfx-cW-cc9"/>
-                        <segue destination="hYU-U8-3Gz" kind="push" identifier="DTSignitureInputSegue" id="WKv-13-FwM"/>
+                        <segue destination="hYU-U8-3Gz" kind="push" identifier="DTSignatureInputSegue" id="WKv-13-FwM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccv-99-l4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,6 +128,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1xG-mQ-zM0"/>
+                    <connections>
+                        <segue destination="MgT-qm-N4I" kind="push" identifier="DTTopicInputSegue" id="cD8-9R-UAY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nj7-n2-4Xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +231,7 @@
                             <outlet property="delegate" destination="MgT-qm-N4I" id="wjx-Jd-91m"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="7Ny-ha-jOe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vc-1z-seQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

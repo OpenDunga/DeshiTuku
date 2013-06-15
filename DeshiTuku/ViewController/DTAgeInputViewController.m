@@ -59,7 +59,7 @@
         int age = [ageString integerValue];
         DTUser *user = [[DTUserManager sharedManager] currentUser];
         user.age = age;
-        [self performSegueWithIdentifier:@"DTSignitureInputSegue" sender:self];
+        [self performSegueWithIdentifier:@"DTSignatureInputSegue" sender:self];
         return YES;
     }
     return NO;
