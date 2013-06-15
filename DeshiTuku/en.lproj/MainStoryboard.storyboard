@@ -60,8 +60,8 @@
                                     <action selector="onResetButtonPressed:" destination="2" eventType="touchUpInside" id="NSy-WZ-ncG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo.png" id="Ovv-By-Lnt">
-                                <rect key="frame" x="134" y="20" width="500" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo2.png" id="Ovv-By-Lnt">
+                                <rect key="frame" x="50" y="20" width="600" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -708,7 +708,7 @@
         <image name="disciple_list_caption.png" width="432" height="65"/>
         <image name="hand.png" width="53" height="63"/>
         <image name="like_caption.png" width="203" height="34"/>
-        <image name="logo.png" width="500" height="667"/>
+        <image name="logo2.png" width="659" height="660"/>
         <image name="mail_caption.png" width="997" height="141"/>
         <image name="mentor.png" width="950" height="368"/>
         <image name="mentor_list_caption.png" width="325" height="51"/>
