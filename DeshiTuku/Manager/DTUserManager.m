@@ -74,6 +74,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                                                                             NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
                                                                                             NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
                                                                                             [ud setObject:data forKey:kCurrentUserKey];
+                                                                                            [[NSUserDefaults standardUserDefaults] synchronize];
                                                                                             success(request, response, JSON);
                                                                                         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                                                                             NSLog(@"failed");
