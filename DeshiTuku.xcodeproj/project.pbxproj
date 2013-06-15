@@ -21,6 +21,12 @@
 		07A71F5F176C149000BA8EF6 /* DTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F5E176C149000BA8EF6 /* DTUser.m */; };
 		07A71F62176C245100BA8EF6 /* DTAgeInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F61176C245100BA8EF6 /* DTAgeInputViewController.m */; };
 		07A71F66176C24F400BA8EF6 /* DTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F65176C24F400BA8EF6 /* DTUserManager.m */; };
+		07A71F9C176C3BB900BA8EF6 /* bg-signature-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F94176C3BB900BA8EF6 /* bg-signature-landscape.png */; };
+		07A71F9D176C3BB900BA8EF6 /* bg-signature-landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F95176C3BB900BA8EF6 /* bg-signature-landscape@2x.png */; };
+		07A71F9E176C3BB900BA8EF6 /* bg-signature-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F96176C3BB900BA8EF6 /* bg-signature-portrait.png */; };
+		07A71F9F176C3BB900BA8EF6 /* bg-signature-portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F97176C3BB900BA8EF6 /* bg-signature-portrait@2x.png */; };
+		07A71FA0176C3BB900BA8EF6 /* JBSignatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F99176C3BB900BA8EF6 /* JBSignatureController.m */; };
+		07A71FA1176C3BB900BA8EF6 /* JBSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F9B176C3BB900BA8EF6 /* JBSignatureView.m */; };
 		14E604B5A90E448890EC02D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCB65EA2DE4AD68C1E2659 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +53,14 @@
 		07A71F61176C245100BA8EF6 /* DTAgeInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAgeInputViewController.m; sourceTree = "<group>"; };
 		07A71F64176C24F400BA8EF6 /* DTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTUserManager.h; path = Manager/DTUserManager.h; sourceTree = "<group>"; };
 		07A71F65176C24F400BA8EF6 /* DTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTUserManager.m; path = Manager/DTUserManager.m; sourceTree = "<group>"; };
+		07A71F94176C3BB900BA8EF6 /* bg-signature-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-signature-landscape.png"; sourceTree = "<group>"; };
+		07A71F95176C3BB900BA8EF6 /* bg-signature-landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-signature-landscape@2x.png"; sourceTree = "<group>"; };
+		07A71F96176C3BB900BA8EF6 /* bg-signature-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-signature-portrait.png"; sourceTree = "<group>"; };
+		07A71F97176C3BB900BA8EF6 /* bg-signature-portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-signature-portrait@2x.png"; sourceTree = "<group>"; };
+		07A71F98176C3BB900BA8EF6 /* JBSignatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSignatureController.h; sourceTree = "<group>"; };
+		07A71F99176C3BB900BA8EF6 /* JBSignatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSignatureController.m; sourceTree = "<group>"; };
+		07A71F9A176C3BB900BA8EF6 /* JBSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSignatureView.h; sourceTree = "<group>"; };
+		07A71F9B176C3BB900BA8EF6 /* JBSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSignatureView.m; sourceTree = "<group>"; };
 		07E89A3AEEA5416DBFAF8C5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		69DCB65EA2DE4AD68C1E2659 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +112,7 @@
 		07A71F3F176C13F800BA8EF6 /* DeshiTuku */ = {
 			isa = PBXGroup;
 			children = (
+				07A71F92176C3BB900BA8EF6 /* lib */,
 				07A71F63176C24D200BA8EF6 /* Manager */,
 				07A71F5C176C147C00BA8EF6 /* Model */,
 				07A71F48176C13F800BA8EF6 /* DTAppDelegate.h */,
@@ -141,6 +156,29 @@
 				07A71F65176C24F400BA8EF6 /* DTUserManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		07A71F92176C3BB900BA8EF6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F93176C3BB900BA8EF6 /* JSSignatureController */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		07A71F93176C3BB900BA8EF6 /* JSSignatureController */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F94176C3BB900BA8EF6 /* bg-signature-landscape.png */,
+				07A71F95176C3BB900BA8EF6 /* bg-signature-landscape@2x.png */,
+				07A71F96176C3BB900BA8EF6 /* bg-signature-portrait.png */,
+				07A71F97176C3BB900BA8EF6 /* bg-signature-portrait@2x.png */,
+				07A71F98176C3BB900BA8EF6 /* JBSignatureController.h */,
+				07A71F99176C3BB900BA8EF6 /* JBSignatureController.m */,
+				07A71F9A176C3BB900BA8EF6 /* JBSignatureView.h */,
+				07A71F9B176C3BB900BA8EF6 /* JBSignatureView.m */,
+			);
+			path = JSSignatureController;
 			sourceTree = "<group>";
 		};
 		1AB895E064955699605B453F /* ViewController */ = {
@@ -211,6 +249,10 @@
 				07A71F4E176C13F800BA8EF6 /* Default@2x.png in Resources */,
 				07A71F50176C13F800BA8EF6 /* Default-568h@2x.png in Resources */,
 				07A71F53176C13F800BA8EF6 /* MainStoryboard.storyboard in Resources */,
+				07A71F9C176C3BB900BA8EF6 /* bg-signature-landscape.png in Resources */,
+				07A71F9D176C3BB900BA8EF6 /* bg-signature-landscape@2x.png in Resources */,
+				07A71F9E176C3BB900BA8EF6 /* bg-signature-portrait.png in Resources */,
+				07A71F9F176C3BB900BA8EF6 /* bg-signature-portrait@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +300,8 @@
 				07A71F5F176C149000BA8EF6 /* DTUser.m in Sources */,
 				07A71F62176C245100BA8EF6 /* DTAgeInputViewController.m in Sources */,
 				07A71F66176C24F400BA8EF6 /* DTUserManager.m in Sources */,
+				07A71FA0176C3BB900BA8EF6 /* JBSignatureController.m in Sources */,
+				07A71FA1176C3BB900BA8EF6 /* JBSignatureView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

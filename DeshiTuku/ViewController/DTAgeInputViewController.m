@@ -7,7 +7,6 @@
 //
 
 #import "DTAgeInputViewController.h"
-#import "FPNumberPadView.h"
 #import "DTUserManager.h"
 
 @interface DTAgeInputViewController ()
