@@ -15,6 +15,8 @@ typedef enum {
 
 @interface DTUser : NSObject <NSCoding>
 
+- (NSString *)sinatureBytes;
+
 @property(readwrite) NSInteger age;
 @property(readwrite) NSString *userID;
 @property(readwrite, copy) UIImage *signature;

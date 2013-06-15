@@ -43,4 +43,21 @@
     return self;
 }
 
+- (NSString *) sinatureBytes {
+    NSData *data = UIImagePNGRepresentation(self.signature);
+    return [self stringWithBytes:data];
+}
+
+- (NSString*) stringWithBytes:(NSData *)data {
+    NSMutableString *stringBuffer = [NSMutableString
+                                     stringWithCapacity:([data length] * 2)];
+    const unsigned char *dataBuffer = [data bytes];
+    int i;
+    
+    for (i = 0; i < [data length]; ++i) {
+        [stringBuffer appendFormat:@"%02lX", (unsigned long)dataBuffer[ i ]];
+    }
+    return stringBuffer;
+}
+
 @end

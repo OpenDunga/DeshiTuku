@@ -41,7 +41,8 @@ static NSString *kCurrentUserKey = @"myAccount";
                                                             path:@"/mentor_entry.php"
                                                       parameters:@{@"age" : [NSNumber numberWithInt:user.age],
                                     @"profile" : user.profile,
-                                    @"topic_id" : [NSNumber numberWithInt:user.topicID]}];
+                                    @"topic_id" : [NSNumber numberWithInt:user.topicID],
+                                    @"signature" : [user sinatureBytes]}];
 
     NSLog(@"age = %d", user.age);
     
