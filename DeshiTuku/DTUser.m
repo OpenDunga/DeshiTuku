@@ -21,7 +21,7 @@
     user.profile = dict[@"profile"];
     user.averageAge = [dict[@"age_ave"] intValue];
     user.title = dict[@"title"];
-    user.signature = [UIImage imageWithHexString:dict[@"signiture"]];
+    user.signature = [UIImage imageWithHexString:dict[@"signature"]];
     return user;
 }
 
