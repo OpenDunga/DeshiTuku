@@ -12,6 +12,14 @@
 
 #pragma mark NSCoding
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.profile = @"";
+    }
+    return self;
+}
+
 - (void)encodeWithCoder:(NSCoder*)coder {
     [coder encodeInteger:self.age forKey:@"age"];
     [coder encodeObject:self.userID forKey:@"userID"];

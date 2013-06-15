@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DTProfileInputViewController : UIViewController <UITextViewDelegate>
+- (IBAction)onNextPressed:(id)sender;
 
 @property(readwrite, nonatomic) IBOutlet UITextView *textView;
 @property(readwrite, nonatomic) IBOutlet UIButton *button;

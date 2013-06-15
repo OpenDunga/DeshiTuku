@@ -31,10 +31,21 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onNextPressed:(id)sender {
+    NSLog(@"pressed");
+    
+    DTUserManager *manager = [DTUserManager sharedManager];
+    [manager registerUser:manager.currentUser];
 }
 
 #pragma mark UITextViewDelegate
