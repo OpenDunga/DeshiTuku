@@ -735,8 +735,9 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="LVB-PC-MCl"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="scroll.png" translatesAutoresizingMaskIntoConstraints="NO" id="2QK-1u-vCU"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="back_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-1y-Y60"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="my_mentor.png" translatesAutoresizingMaskIntoConstraints="NO" id="LVB-PC-MCl"/>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuM-dq-TeB">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="279" id="FxH-al-sR1"/>
@@ -829,27 +830,41 @@
                                     <outlet property="delegate" destination="KCT-0E-4Gk" id="Jdo-5S-1Pz"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="disciple_list_caption.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePP-fx-kcq"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mentor_top_caption.png" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-iu-k65">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="479" id="JaD-LC-DxR"/>
+                                    <constraint firstAttribute="height" constant="77" id="jSC-oa-dOU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wV3-kd-dEh" firstAttribute="leading" secondItem="GbO-3z-zr7" secondAttribute="leading" constant="112" id="16D-tK-DV3"/>
+                            <constraint firstItem="LVB-PC-MCl" firstAttribute="trailing" secondItem="GbO-3z-zr7" secondAttribute="trailing" type="default" id="3kI-wn-v1K"/>
                             <constraint firstItem="D4B-Hw-6ZI" firstAttribute="trailing" secondItem="oYV-UO-ZWH" secondAttribute="trailing" type="default" id="5Lb-U9-dUu"/>
+                            <constraint firstItem="2QK-1u-vCU" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="44" id="B5N-Hy-txH"/>
                             <constraint firstItem="wV3-kd-dEh" firstAttribute="top" secondItem="oYV-UO-ZWH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DgY-3Q-5MW"/>
-                            <constraint firstItem="LVB-PC-MCl" firstAttribute="centerX" secondItem="A4G-ey-18X" secondAttribute="centerX" type="default" id="E0H-4V-ChQ"/>
                             <constraint firstItem="KuM-dq-TeB" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="160" id="FDu-X3-yim"/>
+                            <constraint firstItem="ePP-fx-kcq" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="476" id="JSg-0p-zBT"/>
                             <constraint firstItem="D4B-Hw-6ZI" firstAttribute="top" secondItem="KuM-dq-TeB" secondAttribute="top" type="default" id="NGe-Dr-4hu"/>
                             <constraint firstItem="LVB-PC-MCl" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" type="default" id="Nd5-Vi-eLB"/>
+                            <constraint firstItem="WVr-iu-k65" firstAttribute="centerX" secondItem="LVB-PC-MCl" secondAttribute="centerX" type="default" id="P6h-OW-rN1"/>
                             <constraint firstItem="wV3-kd-dEh" firstAttribute="trailing" secondItem="oYV-UO-ZWH" secondAttribute="trailing" type="default" id="UwP-b0-c2B"/>
                             <constraint firstItem="v4b-1y-Y60" firstAttribute="leading" secondItem="A4G-ey-18X" secondAttribute="leading" type="default" id="WSq-QF-jN2"/>
                             <constraint firstItem="LVB-PC-MCl" firstAttribute="leading" secondItem="GbO-3z-zr7" secondAttribute="leading" type="default" id="XnH-wE-MRy"/>
                             <constraint firstItem="LVB-PC-MCl" firstAttribute="bottom" secondItem="GbO-3z-zr7" secondAttribute="bottom" type="default" id="Ztg-71-ygl"/>
                             <constraint firstItem="pHY-d6-jph" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="198" id="Zyx-9c-vHI"/>
                             <constraint firstItem="KuM-dq-TeB" firstAttribute="leading" secondItem="GbO-3z-zr7" secondAttribute="leading" constant="109" id="co4-I2-Rde"/>
+                            <constraint firstItem="ePP-fx-kcq" firstAttribute="centerX" secondItem="A4G-ey-18X" secondAttribute="centerX" type="default" id="fgT-Ma-7fv"/>
                             <constraint firstItem="v4b-1y-Y60" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="461" id="hac-6H-ddQ"/>
                             <constraint firstItem="A4G-ey-18X" firstAttribute="bottom" secondItem="GbO-3z-zr7" secondAttribute="bottom" type="default" id="hvc-2n-gBs"/>
+                            <constraint firstItem="WVr-iu-k65" firstAttribute="top" secondItem="GbO-3z-zr7" secondAttribute="top" constant="84" id="mIV-EC-Ytp"/>
+                            <constraint firstItem="WVr-iu-k65" firstAttribute="centerX" secondItem="ePP-fx-kcq" secondAttribute="centerX" type="default" id="mcR-of-AxT"/>
                             <constraint firstItem="wV3-kd-dEh" firstAttribute="top" secondItem="pHY-d6-jph" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uWY-Cl-ncA"/>
                             <constraint firstItem="A4G-ey-18X" firstAttribute="trailing" secondItem="v4b-1y-Y60" secondAttribute="trailing" type="default" id="wmr-Lg-8AQ"/>
                             <constraint firstItem="oYV-UO-ZWH" firstAttribute="leading" secondItem="pHY-d6-jph" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xhU-cT-tvP"/>
+                            <constraint firstItem="2QK-1u-vCU" firstAttribute="trailing" secondItem="A4G-ey-18X" secondAttribute="trailing" type="default" id="zH2-B0-hSi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3uS-ib-4pO"/>
@@ -873,12 +888,13 @@
         <image name="decide.png" width="375" height="386"/>
         <image name="decide_pressed.png" width="375" height="386"/>
         <image name="disciple.png" width="950" height="368"/>
+        <image name="disciple_list_caption.png" width="432" height="65"/>
         <image name="hand.png" width="53" height="63"/>
         <image name="like_caption.png" width="203" height="34"/>
         <image name="mail_caption.png" width="997" height="141"/>
         <image name="mentor.png" width="950" height="368"/>
         <image name="mentor_list_caption.png" width="325" height="51"/>
-        <image name="my_mentor.png" width="768" height="1024"/>
+        <image name="mentor_top_caption.png" width="939" height="154"/>
         <image name="next.png" width="375" height="386"/>
         <image name="next_pressed.png" width="375" height="386"/>
         <image name="profile_caption.png" width="908" height="70"/>
