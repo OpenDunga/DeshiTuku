@@ -42,7 +42,6 @@
     
     DTUserManager *manager = [DTUserManager sharedManager];
     DTUser *user = manager.currentUser;
-    NSLog(@"%@", ageLabel);
     signatureView.image = user.signature;
     titleView.image = user.titleImage;
     ageLabel.text = [NSString stringWithFormat:@"%d", user.age];
@@ -72,6 +71,30 @@
     signatureView.image = user.signature;
     likeLabel.text = [NSString stringWithFormat:@"%d", user.likes];
     return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DTUser *user = [self.disciples objectAtIndex:indexPath.row];
+    MFMailComposeViewController *mailPicker = [[MFMailComposeViewController alloc] init];
+    mailPicker.mailComposeDelegate = self;
+    
+    // メール本文を設定
+    [mailPicker setMessageBody:@"本文" isHTML:NO];
+    
+    // 題名を設定
+    [mailPicker setSubject:@"題名"];
+    
+    // 宛先を設定
+    [mailPicker setToRecipients:@[user.email]];
+    [self presentModalViewController:mailPicker animated:YES];
+}
+
+#pragma mark MFMailComposeViewControllerDelegate
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

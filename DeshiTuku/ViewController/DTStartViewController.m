@@ -79,6 +79,9 @@
     } else if (user.type == DTUserTypeDisciple) {
         self.startButton.titleLabel.text = @"教えを請う";
     }
+    if (user) {
+        NSLog(@"pk = %d", user.primaryKey);
+    }
     if (user == nil) {
         [self.resetButton setHidden:YES];
     }

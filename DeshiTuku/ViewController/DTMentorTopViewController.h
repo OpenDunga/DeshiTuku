@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface DTMentorTopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DTMentorTopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
 
 @property (readwrite, nonatomic) IBOutlet UITableView *tableView;
 @property (readwrite, nonatomic) NSArray *disciples;

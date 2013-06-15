@@ -142,9 +142,10 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                                                                             for (NSDictionary *dict in JSON) {
                                                                                                 DTUser *user = [[DTUser alloc] init];
                                                                                                 user.primaryKey = [dict[@"pk"] intValue];
-                                                                                                user.age = [dict[@"pk"] intValue];
+                                                                                                user.age = [dict[@"age"] intValue];
                                                                                                 user.signature = [UIImage imageWithHexString:dict[@"signature"]];
                                                                                                 user.email = dict[@"email"];
+                                                                                                user.likes = [dict[@"likes"] intValue];
                                                                                                 [disciples addObject:user];
                                                                                             }
                                                                                             success(disciples);
