@@ -8,6 +8,7 @@
 
 #import "DTUserManager.h"
 #import "AFNetworking.h"
+#import "UIImage+UIImage_HexString.h"
 
 static NSString *kCurrentUserKey = @"myAccount";
 static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
@@ -103,6 +104,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
 - (void)resetUser {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:nil forKey:kCurrentUserKey];
+    _currentUser = nil;
 }
 
 - (void)fetchMentorList {
@@ -125,6 +127,31 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
+}
+
+- (void)fetchDisciplesList:(DTUser *)mentor success:(void (^)(NSArray *))success {
+    NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSURLRequest *request = [httpClient requestWithMethod:@"GET"
+                                                     path:@"disciples.php"
+                                               parameters:@{@"uid" : mentor.userID}];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            NSMutableArray *disciples = [NSMutableArray array];
+                                                                                            for (NSDictionary *dict in JSON) {
+                                                                                                DTUser *user = [[DTUser alloc] init];
+                                                                                                user.primaryKey = [dict[@"pk"] intValue];
+                                                                                                user.age = [dict[@"pk"] intValue];
+                                                                                                user.signature = [UIImage imageWithHexString:dict[@"signature"]];
+                                                                                                user.email = dict[@"email"];
+                                                                                            }
+                                                                                            success(disciples);
+                                                                                        }
+                                                                                        failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                            NSLog(@"fail");
+                                                                                        }];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:operation];    
 }
 
 @end

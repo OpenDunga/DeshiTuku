@@ -28,6 +28,8 @@
 		074CB32B176CD0310090E4BE /* rank3.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB326176CD0310090E4BE /* rank3.png */; };
 		074CB32C176CD0310090E4BE /* rank4.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB327176CD0310090E4BE /* rank4.png */; };
 		074CB330176CD3550090E4BE /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB32F176CD3550090E4BE /* back_button.png */; };
+		074CB332176CD8910090E4BE /* my_mentor.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB331176CD8910090E4BE /* my_mentor.png */; };
+		074CB335176CDD560090E4BE /* DTMentorTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB334176CDD550090E4BE /* DTMentorTopViewController.m */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -92,6 +94,9 @@
 		074CB326176CD0310090E4BE /* rank3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank3.png; sourceTree = "<group>"; };
 		074CB327176CD0310090E4BE /* rank4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank4.png; sourceTree = "<group>"; };
 		074CB32F176CD3550090E4BE /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
+		074CB331176CD8910090E4BE /* my_mentor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_mentor.png; sourceTree = "<group>"; };
+		074CB333176CDD550090E4BE /* DTMentorTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMentorTopViewController.h; sourceTree = "<group>"; };
+		074CB334176CDD550090E4BE /* DTMentorTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMentorTopViewController.m; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -272,33 +277,34 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07A71FC9176C79D200BA8EF6 /* age_caption.png */,
+				074CB31C176CC4110090E4BE /* apply.png */,
+				074CB31B176CC4110090E4BE /* apply_selected.png */,
+				07A71FBC176C70B800BA8EF6 /* back.png */,
 				074CB32F176CD3550090E4BE /* back_button.png */,
+				07A71FC0176C728500BA8EF6 /* back_scroll.png */,
+				074CB312176CACC10090E4BE /* back_white.png */,
+				07A71FC3176C731000BA8EF6 /* decide.png */,
+				07A71FC2176C731000BA8EF6 /* decide_pressed.png */,
+				07A71FCB176C7B1400BA8EF6 /* disciple.png */,
+				07A71FBE176C70D900BA8EF6 /* mail_caption.png */,
+				07A71FCC176C7B1400BA8EF6 /* mentor.png */,
+				074CB307176C93FD0090E4BE /* mentor_list.png */,
+				074CB321176CCE810090E4BE /* mentor_list_caption.png */,
+				074CB331176CD8910090E4BE /* my_mentor.png */,
+				074CB2FF176C863B0090E4BE /* name_caption.png */,
+				074CB2FD176C82D60090E4BE /* name_input.png */,
+				074CB304176C89B20090E4BE /* next.png */,
+				074CB303176C89B20090E4BE /* next_pressed.png */,
+				07A71FB7176C57C700BA8EF6 /* profile.png */,
+				074CB301176C88B80090E4BE /* profile_caption.png */,
 				074CB323176CD0310090E4BE /* rank0.png */,
 				074CB324176CD0310090E4BE /* rank1.png */,
 				074CB325176CD0310090E4BE /* rank2.png */,
 				074CB326176CD0310090E4BE /* rank3.png */,
 				074CB327176CD0310090E4BE /* rank4.png */,
-				074CB321176CCE810090E4BE /* mentor_list_caption.png */,
-				074CB31B176CC4110090E4BE /* apply_selected.png */,
-				074CB31C176CC4110090E4BE /* apply.png */,
 				074CB31F176CC4320090E4BE /* scroll.png */,
-				074CB312176CACC10090E4BE /* back_white.png */,
-				074CB307176C93FD0090E4BE /* mentor_list.png */,
-				074CB303176C89B20090E4BE /* next_pressed.png */,
-				074CB304176C89B20090E4BE /* next.png */,
-				074CB301176C88B80090E4BE /* profile_caption.png */,
-				074CB2FF176C863B0090E4BE /* name_caption.png */,
-				074CB2FD176C82D60090E4BE /* name_input.png */,
-				07A71FCB176C7B1400BA8EF6 /* disciple.png */,
-				07A71FCC176C7B1400BA8EF6 /* mentor.png */,
-				07A71FC9176C79D200BA8EF6 /* age_caption.png */,
-				07A71FC2176C731000BA8EF6 /* decide_pressed.png */,
-				07A71FC3176C731000BA8EF6 /* decide.png */,
-				07A71FC0176C728500BA8EF6 /* back_scroll.png */,
-				07A71FBE176C70D900BA8EF6 /* mail_caption.png */,
-				07A71FBC176C70B800BA8EF6 /* back.png */,
 				07A71FB2176C458800BA8EF6 /* topic.png */,
-				07A71FB7176C57C700BA8EF6 /* profile.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 				074CB30D176C96350090E4BE /* DTStartViewController.m */,
 				074CB314176CC02B0090E4BE /* DTMentorApplyViewController.h */,
 				074CB315176CC02B0090E4BE /* DTMentorApplyViewController.m */,
+				074CB333176CDD550090E4BE /* DTMentorTopViewController.h */,
+				074CB334176CDD550090E4BE /* DTMentorTopViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -414,6 +422,7 @@
 				074CB32B176CD0310090E4BE /* rank3.png in Resources */,
 				074CB32C176CD0310090E4BE /* rank4.png in Resources */,
 				074CB330176CD3550090E4BE /* back_button.png in Resources */,
+				074CB332176CD8910090E4BE /* my_mentor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +481,7 @@
 				074CB30E176C96350090E4BE /* DTStartViewController.m in Sources */,
 				074CB311176CA30D0090E4BE /* UIImage+UIImage_HexString.m in Sources */,
 				074CB316176CC02B0090E4BE /* DTMentorApplyViewController.m in Sources */,
+				074CB335176CDD560090E4BE /* DTMentorTopViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

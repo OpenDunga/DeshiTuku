@@ -47,10 +47,10 @@
     if (user == nil) {
         [self performSegueWithIdentifier:@"DTInitializeSegue" sender:self];
     } else if (user.type == DTUserTypeMentor) {
+        [self performSegueWithIdentifier:@"DTMentorTopSegue" sender:self];
     } else if (user.type == DTUserTypeDisciple) {
         [self performSegueWithIdentifier:@"DTMenterListSegue" sender:self];
     }
-    
 }
 
 - (void)onResetButtonPressed:(id)sender {

@@ -39,6 +39,7 @@
     [coder encodeInteger:self.primaryKey forKey:@"primaryKey"];
     [coder encodeInteger:self.age forKey:@"age"];
     [coder encodeInteger:self.averageAge forKey:@"averageAge"];
+    [coder encodeInteger:self.likes forKey:@"likes"];
     [coder encodeObject:self.userID forKey:@"userID"];
     [coder encodeObject:self.email forKey:@"email"];
     // ToDo 画像のNSData化
@@ -55,6 +56,7 @@
     if (self) {
         self.primaryKey = [decoder decodeIntegerForKey:@"primaryKey"];
         self.age = [decoder decodeIntegerForKey:@"age"];
+        self.likes = [decoder decodeIntegerForKey:@"likes"];
         self.averageAge = [decoder decodeIntegerForKey:@"averageAge"];
         self.email = [decoder decodeObjectForKey:@"email"];
         self.userID = [decoder decodeObjectForKey:@"userID"];

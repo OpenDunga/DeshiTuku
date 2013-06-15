@@ -44,6 +44,7 @@
 - (IBAction)onNextPressed:(id)sender {
     DTUserManager *manager = [DTUserManager sharedManager];
     [manager registerUser:manager.currentUser success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        [self performSegueWithIdentifier:@"DTMentorRegisterSegue" sender:self];
     }];
 }
 

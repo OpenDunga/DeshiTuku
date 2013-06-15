@@ -23,6 +23,8 @@
            disciple:(DTUser *)disciple
             success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success;
 - (void)fetchMentorList;
+- (void)fetchDisciplesList:(DTUser *)mentor
+                   success:(void (^)(NSArray *disciples))success;
 
 @property (readwrite, nonatomic) NSArray *mentors;
 
