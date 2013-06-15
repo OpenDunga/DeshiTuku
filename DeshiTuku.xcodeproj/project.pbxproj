@@ -28,6 +28,9 @@
 		07A71FA0176C3BB900BA8EF6 /* JBSignatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F99176C3BB900BA8EF6 /* JBSignatureController.m */; };
 		07A71FA1176C3BB900BA8EF6 /* JBSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F9B176C3BB900BA8EF6 /* JBSignatureView.m */; };
 		07A71FA7176C40AC00BA8EF6 /* DTSignatureInputDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FA6176C40AC00BA8EF6 /* DTSignatureInputDelegate.m */; };
+		07A71FB0176C441D00BA8EF6 /* DTTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FAF176C441D00BA8EF6 /* DTTopicManager.m */; };
+		07A71FB3176C458800BA8EF6 /* topic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FB2176C458800BA8EF6 /* topic.png */; };
+		07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */; };
 		14E604B5A90E448890EC02D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCB65EA2DE4AD68C1E2659 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,11 @@
 		07A71F9B176C3BB900BA8EF6 /* JBSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSignatureView.m; sourceTree = "<group>"; };
 		07A71FA5176C40AC00BA8EF6 /* DTSignatureInputDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTSignatureInputDelegate.h; path = Model/DTSignatureInputDelegate.h; sourceTree = "<group>"; };
 		07A71FA6176C40AC00BA8EF6 /* DTSignatureInputDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTSignatureInputDelegate.m; path = Model/DTSignatureInputDelegate.m; sourceTree = "<group>"; };
+		07A71FAE176C441D00BA8EF6 /* DTTopicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTopicManager.h; path = Manager/DTTopicManager.h; sourceTree = "<group>"; };
+		07A71FAF176C441D00BA8EF6 /* DTTopicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTopicManager.m; path = Manager/DTTopicManager.m; sourceTree = "<group>"; };
+		07A71FB2176C458800BA8EF6 /* topic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topic.png; sourceTree = "<group>"; };
+		07A71FB4176C462B00BA8EF6 /* DTTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTopicViewController.h; sourceTree = "<group>"; };
+		07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTopicViewController.m; sourceTree = "<group>"; };
 		07E89A3AEEA5416DBFAF8C5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		69DCB65EA2DE4AD68C1E2659 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +123,7 @@
 		07A71F3F176C13F800BA8EF6 /* DeshiTuku */ = {
 			isa = PBXGroup;
 			children = (
+				07A71FB1176C458800BA8EF6 /* Images */,
 				07A71F92176C3BB900BA8EF6 /* lib */,
 				07A71F63176C24D200BA8EF6 /* Manager */,
 				07A71F5C176C147C00BA8EF6 /* Model */,
@@ -159,6 +168,8 @@
 			children = (
 				07A71F64176C24F400BA8EF6 /* DTUserManager.h */,
 				07A71F65176C24F400BA8EF6 /* DTUserManager.m */,
+				07A71FAE176C441D00BA8EF6 /* DTTopicManager.h */,
+				07A71FAF176C441D00BA8EF6 /* DTTopicManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -186,11 +197,21 @@
 			path = JSSignatureController;
 			sourceTree = "<group>";
 		};
+		07A71FB1176C458800BA8EF6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				07A71FB2176C458800BA8EF6 /* topic.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		1AB895E064955699605B453F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				07A71F60176C245100BA8EF6 /* DTAgeInputViewController.h */,
 				07A71F61176C245100BA8EF6 /* DTAgeInputViewController.m */,
+				07A71FB4176C462B00BA8EF6 /* DTTopicViewController.h */,
+				07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -258,6 +279,7 @@
 				07A71F9D176C3BB900BA8EF6 /* bg-signature-landscape@2x.png in Resources */,
 				07A71F9E176C3BB900BA8EF6 /* bg-signature-portrait.png in Resources */,
 				07A71F9F176C3BB900BA8EF6 /* bg-signature-portrait@2x.png in Resources */,
+				07A71FB3176C458800BA8EF6 /* topic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +330,8 @@
 				07A71FA0176C3BB900BA8EF6 /* JBSignatureController.m in Sources */,
 				07A71FA1176C3BB900BA8EF6 /* JBSignatureView.m in Sources */,
 				07A71FA7176C40AC00BA8EF6 /* DTSignatureInputDelegate.m in Sources */,
+				07A71FB0176C441D00BA8EF6 /* DTTopicManager.m in Sources */,
+				07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -129,12 +129,55 @@
                     </view>
                     <navigationItem key="navigationItem" id="1xG-mQ-zM0"/>
                     <connections>
-                        <segue destination="MgT-qm-N4I" kind="push" identifier="DTTopicInputSegue" id="cD8-9R-UAY"/>
+                        <segue destination="vEq-a0-ZVT" kind="push" identifier="DTTopicInputSegue" id="Oha-DB-Suk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nj7-n2-4Xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="454" y="224"/>
+        </scene>
+        <!--Topic View Controller-->
+        <scene sceneID="IXe-Aw-ztl">
+            <objects>
+                <viewController id="vEq-a0-ZVT" customClass="DTTopicViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8NE-Ed-dvp">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="topic.png" translatesAutoresizingMaskIntoConstraints="NO" id="WhZ-WW-6Dp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1024" id="Bd2-Sd-CQJ"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8xG-Gb-UGb">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="668" id="igj-7v-SUV"/>
+                                    <constraint firstAttribute="height" constant="440" id="vCs-Or-cjP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vEq-a0-ZVT" id="asm-Vx-Jno"/>
+                                    <outlet property="delegate" destination="vEq-a0-ZVT" id="QJT-aY-5db"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WhZ-WW-6Dp" firstAttribute="trailing" secondItem="8NE-Ed-dvp" secondAttribute="trailing" type="default" id="4tn-y8-VgU"/>
+                            <constraint firstItem="WhZ-WW-6Dp" firstAttribute="leading" secondItem="8NE-Ed-dvp" secondAttribute="leading" type="default" id="8gQ-DJ-0SY"/>
+                            <constraint firstItem="WhZ-WW-6Dp" firstAttribute="top" secondItem="8NE-Ed-dvp" secondAttribute="top" type="default" id="fxQ-Zl-6fj"/>
+                            <constraint firstItem="8xG-Gb-UGb" firstAttribute="leading" secondItem="8NE-Ed-dvp" secondAttribute="leading" constant="49" id="icN-Wh-wW1"/>
+                            <constraint firstItem="8xG-Gb-UGb" firstAttribute="top" secondItem="8NE-Ed-dvp" secondAttribute="top" constant="466" id="mJb-Cc-zGt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gql-I9-6sL"/>
+                    <connections>
+                        <outlet property="tableView" destination="8xG-Gb-UGb" id="qcb-9y-Mxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYj-Di-Sfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="224"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nZf-5W-yOP">
@@ -207,43 +250,22 @@
             </objects>
             <point key="canvasLocation" x="3972" y="-1011"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="pb7-db-sZp">
-            <objects>
-                <tableViewController id="MgT-qm-N4I" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qME-wl-oMO">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gxa-M7-EbH">
-                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="MgT-qm-N4I" id="jhI-6a-2vk"/>
-                            <outlet property="delegate" destination="MgT-qm-N4I" id="wjx-Jd-91m"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="7Ny-ha-jOe"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9vc-1z-seQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1605" y="200"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="topic.png" width="1536" height="2048"/>
+    </resources>
     <classes>
         <class className="DTAgeInputViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DTAgeInputViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="ageLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DTTopicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTTopicViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="DTViewController" superclassName="UIViewController">
