@@ -75,7 +75,9 @@
 
 - (void)updateStartButton {
     DTUser *user = [[DTUserManager sharedManager] loadUser];
-    if (user != nil) {
+    if (user == nil) {
+        [self.startButton setImage:[UIImage imageNamed:@"title_start.png"] forState:UIControlStateNormal];
+    } else {
         if (user.type == DTUserTypeMentor) {
             [self.startButton setImage:[UIImage imageNamed:@"title_mentor.png"] forState:UIControlStateNormal];
         } else if (user.type == DTUserTypeDisciple) {
