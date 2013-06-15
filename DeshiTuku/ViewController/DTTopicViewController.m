@@ -7,6 +7,8 @@
 //
 
 #import "DTTopicViewController.h"
+#import "DTTopicManager.h"
+#import "DTUserManager.h"
 
 @interface DTTopicViewController ()
 
@@ -37,10 +39,20 @@
 
 #pragma mark UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict = [[[DTTopicManager sharedManager] topics] objectAtIndex:indexPath.row];
+    int pk = [[dict objectForKey:@"pk"] intValue];
+    NSString *name = [dict objectForKey:@"name"];
+    DTUser *user = [[DTUserManager sharedManager] currentUser];
+    user.topicID = pk;
+    user.topicName = name;
+    [self performSegueWithIdentifier:@"DTProfileInputSegue" sender:self];
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [[[DTTopicManager sharedManager] topics] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,6 +60,10 @@
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSDictionary *dict = [[[DTTopicManager sharedManager] topics] objectAtIndex:indexPath.row];
+        NSString *pk = [NSString stringWithFormat:@"%d", [[dict objectForKey:@"pk"] intValue]];
+        NSString *name = [dict objectForKey:@"name"];
+        cell.textLabel.text = name;
     }
     return cell;
 }

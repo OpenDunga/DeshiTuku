@@ -8,6 +8,7 @@
 
 #import "DTAgeInputViewController.h"
 #import "DTUserManager.h"
+#import "DTTopicManager.h"
 
 @interface DTAgeInputViewController ()
 
@@ -27,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[DTTopicManager sharedManager] fetchTopicList];
     self.textField.keyboardType = UIKeyboardTypeNumberPad;
     [self.textField becomeFirstResponder];
 	// Do any additional setup after loading the view.

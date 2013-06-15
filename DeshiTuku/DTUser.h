@@ -19,7 +19,8 @@ typedef enum {
 @property(readwrite) NSString *userID;
 @property(readwrite, copy) UIImage *signature;
 @property(readwrite, copy) NSString *profile;
-@property(readwrite, copy) NSString *topic;
+@property(readwrite) NSInteger topicID;
+@property(readwrite, copy) NSString *topicName;
 @property(readwrite) DTUserType type;
 
 @end

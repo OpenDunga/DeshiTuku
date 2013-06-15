@@ -173,11 +173,27 @@
                     <navigationItem key="navigationItem" id="gql-I9-6sL"/>
                     <connections>
                         <outlet property="tableView" destination="8xG-Gb-UGb" id="qcb-9y-Mxa"/>
+                        <segue destination="qor-SW-mmA" kind="push" identifier="DTProfileInputSegue" id="emY-gE-HE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYj-Di-Sfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1460" y="224"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dvE-NV-2Fg">
+            <objects>
+                <viewController id="qor-SW-mmA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGm-xW-jRw">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xgg-Ec-p57"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-SZ-s3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="210"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nZf-5W-yOP">

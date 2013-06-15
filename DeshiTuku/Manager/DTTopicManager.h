@@ -10,4 +10,9 @@
 
 @interface DTTopicManager : NSObject
 
++ (id)sharedManager;
+- (void)fetchTopicList;
+
+@property(readwrite, nonatomic) NSMutableArray *topics;
+
 @end

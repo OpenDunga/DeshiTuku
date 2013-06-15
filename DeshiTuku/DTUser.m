@@ -18,7 +18,8 @@
     // ToDo 画像のNSData化
     //[coder encodeObject:self.signiture forKey:<#(NSString *)key#>];
     [coder encodeObject:self.profile forKey:@"profile"];
-    [coder encodeObject:self.topic forKey:@"topic"];
+    [coder encodeInteger:self.topicID forKey:@"topicID"];
+    [coder encodeObject:self.topicName forKey:@"topicName"];
     [coder encodeInteger:(int)self.type forKey:@"type"];
 }
 - (id)initWithCoder:(NSCoder*)decoder {
@@ -27,7 +28,8 @@
         self.age = [decoder decodeIntegerForKey:@"age"];
         self.userID = [decoder decodeObjectForKey:@"userID"];
         self.profile = [decoder decodeObjectForKey:@"profile"];
-        self.topic = [decoder decodeObjectForKey:@"topic"];
+        self.topicID = [decoder decodeIntegerForKey:@"topicID"];
+        self.topicName = [decoder decodeObjectForKey:@"topicName"];
         self.type = (NSInteger)[decoder decodeIntegerForKey:@"type"];
     }
     return self;
