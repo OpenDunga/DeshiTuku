@@ -31,6 +31,8 @@
 		07A71FB0176C441D00BA8EF6 /* DTTopicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FAF176C441D00BA8EF6 /* DTTopicManager.m */; };
 		07A71FB3176C458800BA8EF6 /* topic.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FB2176C458800BA8EF6 /* topic.png */; };
 		07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */; };
+		07A71FB8176C57C700BA8EF6 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FB7176C57C700BA8EF6 /* profile.png */; };
+		07A71FBB176C58B000BA8EF6 /* DTProfileInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */; };
 		14E604B5A90E448890EC02D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCB65EA2DE4AD68C1E2659 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,9 @@
 		07A71FB2176C458800BA8EF6 /* topic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topic.png; sourceTree = "<group>"; };
 		07A71FB4176C462B00BA8EF6 /* DTTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTopicViewController.h; sourceTree = "<group>"; };
 		07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTopicViewController.m; sourceTree = "<group>"; };
+		07A71FB7176C57C700BA8EF6 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		07A71FB9176C58B000BA8EF6 /* DTProfileInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProfileInputViewController.h; sourceTree = "<group>"; };
+		07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProfileInputViewController.m; sourceTree = "<group>"; };
 		07E89A3AEEA5416DBFAF8C5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		69DCB65EA2DE4AD68C1E2659 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				07A71FB2176C458800BA8EF6 /* topic.png */,
+				07A71FB7176C57C700BA8EF6 /* profile.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				07A71F61176C245100BA8EF6 /* DTAgeInputViewController.m */,
 				07A71FB4176C462B00BA8EF6 /* DTTopicViewController.h */,
 				07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */,
+				07A71FB9176C58B000BA8EF6 /* DTProfileInputViewController.h */,
+				07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -280,6 +288,7 @@
 				07A71F9E176C3BB900BA8EF6 /* bg-signature-portrait.png in Resources */,
 				07A71F9F176C3BB900BA8EF6 /* bg-signature-portrait@2x.png in Resources */,
 				07A71FB3176C458800BA8EF6 /* topic.png in Resources */,
+				07A71FB8176C57C700BA8EF6 /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +341,7 @@
 				07A71FA7176C40AC00BA8EF6 /* DTSignatureInputDelegate.m in Sources */,
 				07A71FB0176C441D00BA8EF6 /* DTTopicManager.m in Sources */,
 				07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */,
+				07A71FBB176C58B000BA8EF6 /* DTProfileInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
