@@ -72,7 +72,7 @@
         int age = [ageString integerValue];
         DTUser *user = [[DTUserManager sharedManager] currentUser];
         user.age = age;
-        if (age >= 40) { // 先生
+        if (age >= 50) { // 先生
             user.type = DTUserTypeMentor;
             [self performSegueWithIdentifier:@"DTMentorSegue" sender:self];
         } else {

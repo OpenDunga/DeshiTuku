@@ -49,6 +49,10 @@
     [self performSegueWithIdentifier:@"DTProfileInputSegue" sender:self];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 120;
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -57,14 +61,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
+    
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        NSDictionary *dict = [[[DTTopicManager sharedManager] topics] objectAtIndex:indexPath.row];
-        NSString *pk = [NSString stringWithFormat:@"%d", [[dict objectForKey:@"pk"] intValue]];
-        NSString *name = [dict objectForKey:@"name"];
-        cell.textLabel.text = name;
     }
+    NSDictionary *dict = [[[DTTopicManager sharedManager] topics] objectAtIndex:indexPath.row];
+    NSString *pk = [NSString stringWithFormat:@"%d", [[dict objectForKey:@"pk"] intValue]];
+    NSString *name = [dict objectForKey:@"name"];
+    cell.textLabel.text = name;
     return cell;
 }
 
