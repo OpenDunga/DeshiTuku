@@ -12,6 +12,9 @@
 		074CB302176C88B80090E4BE /* profile_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB301176C88B80090E4BE /* profile_caption.png */; };
 		074CB305176C89B20090E4BE /* next_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB303176C89B20090E4BE /* next_pressed.png */; };
 		074CB306176C89B20090E4BE /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB304176C89B20090E4BE /* next.png */; };
+		074CB308176C93FD0090E4BE /* mentor_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB307176C93FD0090E4BE /* mentor_list.png */; };
+		074CB30B176C946F0090E4BE /* DTMentorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB30A176C946E0090E4BE /* DTMentorListViewController.m */; };
+		074CB30E176C96350090E4BE /* DTStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB30D176C96350090E4BE /* DTStartViewController.m */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -56,6 +59,11 @@
 		074CB301176C88B80090E4BE /* profile_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_caption.png; sourceTree = "<group>"; };
 		074CB303176C89B20090E4BE /* next_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_pressed.png; sourceTree = "<group>"; };
 		074CB304176C89B20090E4BE /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		074CB307176C93FD0090E4BE /* mentor_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentor_list.png; sourceTree = "<group>"; };
+		074CB309176C946E0090E4BE /* DTMentorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMentorListViewController.h; sourceTree = "<group>"; };
+		074CB30A176C946E0090E4BE /* DTMentorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMentorListViewController.m; sourceTree = "<group>"; };
+		074CB30C176C96350090E4BE /* DTStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStartViewController.h; sourceTree = "<group>"; };
+		074CB30D176C96350090E4BE /* DTStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStartViewController.m; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -234,6 +242,7 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				074CB307176C93FD0090E4BE /* mentor_list.png */,
 				074CB303176C89B20090E4BE /* next_pressed.png */,
 				074CB304176C89B20090E4BE /* next.png */,
 				074CB301176C88B80090E4BE /* profile_caption.png */,
@@ -264,6 +273,10 @@
 				07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */,
 				07A71FC6176C749300BA8EF6 /* DTEmailInputViewController.h */,
 				07A71FC7176C749400BA8EF6 /* DTEmailInputViewController.m */,
+				074CB309176C946E0090E4BE /* DTMentorListViewController.h */,
+				074CB30A176C946E0090E4BE /* DTMentorListViewController.m */,
+				074CB30C176C96350090E4BE /* DTStartViewController.h */,
+				074CB30D176C96350090E4BE /* DTStartViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -346,6 +359,7 @@
 				074CB302176C88B80090E4BE /* profile_caption.png in Resources */,
 				074CB305176C89B20090E4BE /* next_pressed.png in Resources */,
 				074CB306176C89B20090E4BE /* next.png in Resources */,
+				074CB308176C93FD0090E4BE /* mentor_list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +414,8 @@
 				07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */,
 				07A71FBB176C58B000BA8EF6 /* DTProfileInputViewController.m in Sources */,
 				07A71FC8176C749400BA8EF6 /* DTEmailInputViewController.m in Sources */,
+				074CB30B176C946F0090E4BE /* DTMentorListViewController.m in Sources */,
+				074CB30E176C96350090E4BE /* DTStartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

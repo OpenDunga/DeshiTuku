@@ -22,9 +22,18 @@ static NSString *kCurrentUserKey = @"myAccount";
     return sharedInstance;
 }
 
-- (DTUser *)currentUser {
+- (DTUser *)loadUser {
     NSUserDefaults *dt = [NSUserDefaults standardUserDefaults];
-    DTUser *user = (DTUser *)[dt objectForKey:kCurrentUserKey];
+    NSData *data = [dt objectForKey:kCurrentUserKey];
+    if (data != nil) {
+        DTUser *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        return user;
+    }
+    return nil;
+}
+
+- (DTUser *)currentUser {
+    DTUser *user = [self loadUser];
     if (user != nil) {
         return user;
     }
@@ -59,12 +68,18 @@ static NSString *kCurrentUserKey = @"myAccount";
                                                                                             user.userID = uid;
                                                                                             NSLog(@"uid = %@", user.userID);
                                                                                             NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-                                                                                            [ud objectForKey:kCurrentUserKey];
+                                                                                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
+                                                                                            [ud setObject:data forKey:kCurrentUserKey];
                                                                                         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                                                                             NSLog(@"failed");
                                                                                         }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
+}
+
+- (void)resetUser {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:nil forKey:kCurrentUserKey];
 }
 
 @end

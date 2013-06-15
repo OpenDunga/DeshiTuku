@@ -15,6 +15,8 @@
 
 + (id)sharedManager;
 - (DTUser *)currentUser;
+- (DTUser *)loadUser;
 - (void)registerUser:(DTUser *)user;
+- (void)resetUser;
 
 @end
