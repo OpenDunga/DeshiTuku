@@ -81,36 +81,38 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)loadView {
+    [super loadView];
     self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.delegate = [[DTSignatureInputDelegate alloc] init];
     
     // Background images
-    self.portraitBackgroundImage = [UIImage imageNamed:@"bg-signature-portrait"];
-    self.landscapeBackgroundImage = [UIImage imageNamed:@"bg-signature-landscape"];
+    self.portraitBackgroundImage = [UIImage imageNamed:@"name_input"];
+    //self.landscapeBackgroundImage = [UIImage imageNamed:@"bg-signature-landscape"];
     self.signaturePanelBackgroundImageView = [[UIImageView alloc] initWithImage:self.portraitBackgroundImage];
     
     // Signature view
     self.signatureView = [[JBSignatureView alloc] init];
+    self.signatureView.backgroundColor = [UIColor clearColor];
     
     // Confirm
-    self.confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*self.confirmButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.confirmButton setTitle:@"Confirm" forState:UIControlStateNormal];
     [self.confirmButton sizeToFit];
     [self.confirmButton setFrame:CGRectMake(self.view.frame.size.width - self.confirmButton.frame.size.width - 10.0f,
                                             10.0f,
                                             self.confirmButton.frame.size.width,
                                             self.confirmButton.frame.size.height)];
-    [self.confirmButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
+    [self.confirmButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];*/
     
     // Cancel
-    self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [self.cancelButton sizeToFit];
     [self.cancelButton setFrame:CGRectMake(10.0f,
                                            10.0f,
                                            self.cancelButton.frame.size.width,
                                            self.cancelButton.frame.size.height)];
-    [self.cancelButton setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];
+    [self.cancelButton setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin];*/
     
 }
 
@@ -119,24 +121,43 @@ delegate = delegate_;
  * @author Jesse Bunch
  **/
 -(void)viewDidLoad {
+    [super viewDidLoad];
     
     // Background Image
-    [self.signaturePanelBackgroundImageView setFrame:self.view.bounds];
+    UIImage *background = [UIImage imageNamed:@"back_scroll.png"];
+    UIImageView *view = [[UIImageView alloc] initWithImage:background];
+    [view setFrame:self.view.bounds];
+    [self.view addSubview:view];
+    
+    // Background Image
+    [self.signaturePanelBackgroundImageView setFrame:CGRectMake(119, 142, 544, 200)];
     [self.signaturePanelBackgroundImageView setContentMode:UIViewContentModeTopLeft];
     [self.view addSubview:self.signaturePanelBackgroundImageView];
     
     // Signature View
-    [self.signatureView setFrame:self.view.bounds];
+    [self.signatureView setFrame:CGRectMake(119, 142, 544, 200)];
     [self.view addSubview:self.signatureView];
     
+    UIImageView *caption = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"name_caption"]];
+    [caption setFrame:CGRectMake(130, 77, 546, 62)];
+    [self.view addSubview:caption];
+    
+    [self.nextButton removeFromSuperview];
+    [self.view addSubview:self.nextButton];
+    [self.nextButton setFrame:CGRectMake(290, 406, 188, 193)];
+    
     // Buttons
-    [self.view addSubview:self.cancelButton];
-    [self.view addSubview:self.confirmButton];
+    //[self.view addSubview:self.cancelButton];
+    //[self.view addSubview:self.confirmButton];
     
     // Button actions
-    [self.confirmButton addTarget:self action:@selector(didTapCanfirmButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.cancelButton addTarget:self action:@selector(didTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
+    //[self.confirmButton addTarget:self action:@selector(didTapCanfirmButton) forControlEvents:UIControlEventTouchUpInside];
+    //[self.cancelButton addTarget:self action:@selector(didTapCancelButton) forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+- (IBAction)nextButtonPressed:(id)sender {
+    [self didTapCanfirmButton];
 }
 
 /**

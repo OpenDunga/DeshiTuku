@@ -23,8 +23,11 @@
 // Delegate
 @property(nonatomic,strong) id<JBSignatureControllerDelegate> delegate;
 
+@property(nonatomic, strong) IBOutlet UIButton *nextButton;
+
 // Clear the signature
 -(void)clearSignature;
+- (IBAction)nextButtonPressed:(id)sender;
 
 @end
 
