@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DTUser : NSObject
+typedef enum {
+    DTUserTypeMentor,
+    DTUserTypeDisciple
+} DTUserType;
 
-- (id)initWithUserName:(NSString*)username;
+@interface DTUser : NSObject <NSCoding>
 
-@property(readwrite) NSString* userName;
+@property(readwrite) NSInteger age;
+@property(readwrite) NSString *userID;
+@property(readwrite, copy) UIImage *signiture;
+@property(readwrite, copy) NSString *profile;
+@property(readwrite, copy) NSString *topic;
+@property(readwrite) DTUserType type;
 
 @end
