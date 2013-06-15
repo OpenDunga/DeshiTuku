@@ -144,6 +144,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                                                                                 user.age = [dict[@"pk"] intValue];
                                                                                                 user.signature = [UIImage imageWithHexString:dict[@"signature"]];
                                                                                                 user.email = dict[@"email"];
+                                                                                                [disciples addObject:user];
                                                                                             }
                                                                                             success(disciples);
                                                                                         }

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTMentorTopViewController : UIViewController
+@interface DTMentorTopViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (readwrite, nonatomic) IBOutlet UITableView *tableView;
+@property (readwrite, nonatomic) NSArray *disciples;
 
 @end

@@ -24,10 +24,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    DTUserManager *manager = [DTUserManager sharedManager];
+    [manager fetchDisciplesList:[manager currentUser] success:^(NSArray *disciples) {
+        self.disciples = disciples;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -50,6 +53,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (self.disciples == nil) {
+        return 0;
+    }
+    return [self.disciples count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DTUser *user = [self.disciples objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscipleCell"];
+    UIImageView *signatureView = (UIImageView *)[cell viewWithTag:1];
+    UILabel *likeLabel = (UILabel *)[cell viewWithTag:2];
+    signatureView.image = user.signature;
+    likeLabel.text = [NSString stringWithFormat:@"%d", user.likes];
+    return cell;
 }
 
 @end

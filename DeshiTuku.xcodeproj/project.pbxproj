@@ -30,6 +30,9 @@
 		074CB330176CD3550090E4BE /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB32F176CD3550090E4BE /* back_button.png */; };
 		074CB332176CD8910090E4BE /* my_mentor.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB331176CD8910090E4BE /* my_mentor.png */; };
 		074CB335176CDD560090E4BE /* DTMentorTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CB334176CDD550090E4BE /* DTMentorTopViewController.m */; };
+		074CB339176CE76C0090E4BE /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB336176CE76C0090E4BE /* hand.png */; };
+		074CB33A176CE76C0090E4BE /* like_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB337176CE76C0090E4BE /* like_caption.png */; };
+		074CB33B176CE76C0090E4BE /* write_mail_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB338176CE76C0090E4BE /* write_mail_caption.png */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -97,6 +100,9 @@
 		074CB331176CD8910090E4BE /* my_mentor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_mentor.png; sourceTree = "<group>"; };
 		074CB333176CDD550090E4BE /* DTMentorTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMentorTopViewController.h; sourceTree = "<group>"; };
 		074CB334176CDD550090E4BE /* DTMentorTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMentorTopViewController.m; sourceTree = "<group>"; };
+		074CB336176CE76C0090E4BE /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
+		074CB337176CE76C0090E4BE /* like_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like_caption.png; sourceTree = "<group>"; };
+		074CB338176CE76C0090E4BE /* write_mail_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write_mail_caption.png; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -305,6 +311,9 @@
 				074CB327176CD0310090E4BE /* rank4.png */,
 				074CB31F176CC4320090E4BE /* scroll.png */,
 				07A71FB2176C458800BA8EF6 /* topic.png */,
+				074CB336176CE76C0090E4BE /* hand.png */,
+				074CB337176CE76C0090E4BE /* like_caption.png */,
+				074CB338176CE76C0090E4BE /* write_mail_caption.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -423,6 +432,9 @@
 				074CB32C176CD0310090E4BE /* rank4.png in Resources */,
 				074CB330176CD3550090E4BE /* back_button.png in Resources */,
 				074CB332176CD8910090E4BE /* my_mentor.png in Resources */,
+				074CB339176CE76C0090E4BE /* hand.png in Resources */,
+				074CB33A176CE76C0090E4BE /* like_caption.png in Resources */,
+				074CB33B176CE76C0090E4BE /* write_mail_caption.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
