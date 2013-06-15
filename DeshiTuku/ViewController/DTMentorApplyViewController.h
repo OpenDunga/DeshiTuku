@@ -12,8 +12,11 @@
 @interface DTMentorApplyViewController : UIViewController
 
 @property(readwrite, nonatomic) DTUser *mentor;
+@property(readwrite, nonatomic) IBOutlet UIButton *applyButton;
+@property(readwrite, nonatomic) IBOutlet UIButton *thanksButton;
 
 - (IBAction)onApplyButtonPressed:(id)sender;
+- (IBAction)onThankButtonPressed:(id)sender;
 - (IBAction)onBackButtonPressed:(id)sender;
 
 @end
