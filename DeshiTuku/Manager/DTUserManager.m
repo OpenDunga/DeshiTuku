@@ -55,13 +55,13 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                      parameters:@{@"age" : [NSNumber numberWithInt:user.age],
                    @"profile" : user.profile,
                    @"topic_id" : [NSNumber numberWithInt:user.topicID],
-                   @"signature" : [user sinatureBytes]}];
+                   @"signature" : [user signatureBytes]}];
     } else {
         request = [httpClient requestWithMethod:@"POST"
                                            path:@"/disciple_entry.php"
                                      parameters:@{@"age" : [NSNumber numberWithInt:user.age],
                    @"email" : user.email,
-                   @"signature" : [user sinatureBytes]}];
+                   @"signature" : [user signatureBytes]}];
         
     }
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request

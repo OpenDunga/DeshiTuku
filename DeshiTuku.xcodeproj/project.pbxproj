@@ -33,7 +33,6 @@
 		074CB339176CE76C0090E4BE /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB336176CE76C0090E4BE /* hand.png */; };
 		074CB33A176CE76C0090E4BE /* like_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB337176CE76C0090E4BE /* like_caption.png */; };
 		074CB33B176CE76C0090E4BE /* write_mail_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB338176CE76C0090E4BE /* write_mail_caption.png */; };
-		074CB33D176CEC6F0090E4BE /* disciple_list_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB33C176CEC6F0090E4BE /* disciple_list_caption.png */; };
 		074CB33F176CECBA0090E4BE /* mentor_top_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB33E176CECBA0090E4BE /* mentor_top_caption.png */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
@@ -70,6 +69,8 @@
 		07A71FCA176C79D200BA8EF6 /* age_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FC9176C79D200BA8EF6 /* age_caption.png */; };
 		07A71FCD176C7B1400BA8EF6 /* disciple.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FCB176C7B1400BA8EF6 /* disciple.png */; };
 		07A71FCE176C7B1400BA8EF6 /* mentor.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FCC176C7B1400BA8EF6 /* mentor.png */; };
+		07FAAD3A176CEF54005FE40F /* topic_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FAAD39176CEF54005FE40F /* topic_caption.png */; };
+		07FAAD3D176CF597005FE40F /* disciple_list_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FAAD3C176CF597005FE40F /* disciple_list_caption.png */; };
 		14E604B5A90E448890EC02D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCB65EA2DE4AD68C1E2659 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +106,6 @@
 		074CB336176CE76C0090E4BE /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
 		074CB337176CE76C0090E4BE /* like_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like_caption.png; sourceTree = "<group>"; };
 		074CB338176CE76C0090E4BE /* write_mail_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write_mail_caption.png; sourceTree = "<group>"; };
-		074CB33C176CEC6F0090E4BE /* disciple_list_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disciple_list_caption.png; sourceTree = "<group>"; };
 		074CB33E176CECBA0090E4BE /* mentor_top_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentor_top_caption.png; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -158,6 +158,8 @@
 		07A71FCB176C7B1400BA8EF6 /* disciple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disciple.png; sourceTree = "<group>"; };
 		07A71FCC176C7B1400BA8EF6 /* mentor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentor.png; sourceTree = "<group>"; };
 		07E89A3AEEA5416DBFAF8C5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		07FAAD39176CEF54005FE40F /* topic_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topic_caption.png; sourceTree = "<group>"; };
+		07FAAD3C176CF597005FE40F /* disciple_list_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disciple_list_caption.png; sourceTree = "<group>"; };
 		69DCB65EA2DE4AD68C1E2659 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07FAAD3C176CF597005FE40F /* disciple_list_caption.png */,
 				07A71FC9176C79D200BA8EF6 /* age_caption.png */,
 				074CB31C176CC4110090E4BE /* apply.png */,
 				074CB31B176CC4110090E4BE /* apply_selected.png */,
@@ -297,10 +300,13 @@
 				07A71FC3176C731000BA8EF6 /* decide.png */,
 				07A71FC2176C731000BA8EF6 /* decide_pressed.png */,
 				07A71FCB176C7B1400BA8EF6 /* disciple.png */,
+				074CB336176CE76C0090E4BE /* hand.png */,
+				074CB337176CE76C0090E4BE /* like_caption.png */,
 				07A71FBE176C70D900BA8EF6 /* mail_caption.png */,
 				07A71FCC176C7B1400BA8EF6 /* mentor.png */,
 				074CB307176C93FD0090E4BE /* mentor_list.png */,
 				074CB321176CCE810090E4BE /* mentor_list_caption.png */,
+				074CB33E176CECBA0090E4BE /* mentor_top_caption.png */,
 				074CB331176CD8910090E4BE /* my_mentor.png */,
 				074CB2FF176C863B0090E4BE /* name_caption.png */,
 				074CB2FD176C82D60090E4BE /* name_input.png */,
@@ -315,11 +321,8 @@
 				074CB327176CD0310090E4BE /* rank4.png */,
 				074CB31F176CC4320090E4BE /* scroll.png */,
 				07A71FB2176C458800BA8EF6 /* topic.png */,
-				074CB336176CE76C0090E4BE /* hand.png */,
-				074CB337176CE76C0090E4BE /* like_caption.png */,
+				07FAAD39176CEF54005FE40F /* topic_caption.png */,
 				074CB338176CE76C0090E4BE /* write_mail_caption.png */,
-				074CB33C176CEC6F0090E4BE /* disciple_list_caption.png */,
-				074CB33E176CECBA0090E4BE /* mentor_top_caption.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -441,8 +444,9 @@
 				074CB339176CE76C0090E4BE /* hand.png in Resources */,
 				074CB33A176CE76C0090E4BE /* like_caption.png in Resources */,
 				074CB33B176CE76C0090E4BE /* write_mail_caption.png in Resources */,
-				074CB33D176CEC6F0090E4BE /* disciple_list_caption.png in Resources */,
 				074CB33F176CECBA0090E4BE /* mentor_top_caption.png in Resources */,
+				07FAAD3A176CEF54005FE40F /* topic_caption.png in Resources */,
+				07FAAD3D176CF597005FE40F /* disciple_list_caption.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

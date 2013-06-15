@@ -15,7 +15,7 @@ typedef enum {
 
 @interface DTUser : NSObject <NSCoding>
 
-- (NSString *)sinatureBytes;
+- (NSString *)signatureBytes;
 - (UIImage *)titleImage;
 + (DTUser *)userWithDictionary:(NSDictionary *)dict;
 

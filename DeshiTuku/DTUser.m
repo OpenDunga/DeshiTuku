@@ -71,7 +71,7 @@
     return self;
 }
 
-- (NSString *) sinatureBytes {
+- (NSString *) signatureBytes {
     NSData *data = UIImagePNGRepresentation(self.signature);
     return [self stringWithBytes:data];
 }
