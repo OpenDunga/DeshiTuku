@@ -94,8 +94,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="age_caption.png" id="8OV-cC-se1">
                                 <rect key="frame" x="177" y="98" width="449" height="45"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="100" textAlignment="center" minimumFontSize="164" id="k0x-cQ-LHV">
-                                <rect key="frame" x="73" y="164" width="623" height="154"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="50" textAlignment="center" minimumFontSize="164" id="k0x-cQ-LHV">
+                                <rect key="frame" x="106" y="164" width="590" height="190"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="164"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
