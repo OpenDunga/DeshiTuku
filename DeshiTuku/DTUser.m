@@ -24,7 +24,8 @@
     [coder encodeInteger:self.age forKey:@"age"];
     [coder encodeObject:self.userID forKey:@"userID"];
     // ToDo 画像のNSData化
-    //[coder encodeObject:self.signiture forKey:<#(NSString *)key#>];
+    NSData *data = UIImagePNGRepresentation(self.signature);
+    [coder encodeObject:data forKey:@"signature"];
     [coder encodeObject:self.profile forKey:@"profile"];
     [coder encodeInteger:self.topicID forKey:@"topicID"];
     [coder encodeObject:self.topicName forKey:@"topicName"];
@@ -35,6 +36,8 @@
     if (self) {
         self.age = [decoder decodeIntegerForKey:@"age"];
         self.userID = [decoder decodeObjectForKey:@"userID"];
+        NSData *data = [decoder decodeObjectForKey:@"signature"];
+        self.signature = [UIImage imageWithData:data];
         self.profile = [decoder decodeObjectForKey:@"profile"];
         self.topicID = [decoder decodeIntegerForKey:@"topicID"];
         self.topicName = [decoder decodeObjectForKey:@"topicName"];

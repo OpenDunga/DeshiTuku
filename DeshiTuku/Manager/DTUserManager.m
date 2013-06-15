@@ -45,16 +45,18 @@ static NSString *kCurrentUserKey = @"myAccount";
                                     @"signature" : [user sinatureBytes]}];
 
     NSLog(@"age = %d", user.age);
-    
     NSLog(@"topic = %d", user.topicID);
-    
     NSLog(@"profile = %@", user.profile);
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"success");
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"fail");
-    }];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            NSString *uid = ((NSDictionary*)JSON)[@"uid"];
+                                                                                            user.userID = uid;
+                                                                                            NSLog(@"uid = %@", user.userID);
+                                                                                            NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+                                                                                            [ud objectForKey:kCurrentUserKey];
+                                                                                        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                            NSLog(@"failed");
+                                                                                        }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
     /*
