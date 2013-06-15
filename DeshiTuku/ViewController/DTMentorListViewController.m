@@ -52,6 +52,7 @@
     UILabel *profileLabel = (UILabel *)[cell viewWithTag:4];
     
     [signatureView setImage:user.signature];
+    [titleView setImage:user.titleImage];
     [ageLabel setText:[NSString stringWithFormat:@"%d", user.age]];
     [profileLabel setText:user.profile];
     profileLabel.text = user.profile;

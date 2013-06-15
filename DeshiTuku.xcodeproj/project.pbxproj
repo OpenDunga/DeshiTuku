@@ -22,6 +22,11 @@
 		074CB31E176CC4110090E4BE /* apply.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB31C176CC4110090E4BE /* apply.png */; };
 		074CB320176CC4320090E4BE /* scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB31F176CC4320090E4BE /* scroll.png */; };
 		074CB322176CCE810090E4BE /* mentor_list_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB321176CCE810090E4BE /* mentor_list_caption.png */; };
+		074CB328176CD0310090E4BE /* rank0.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB323176CD0310090E4BE /* rank0.png */; };
+		074CB329176CD0310090E4BE /* rank1.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB324176CD0310090E4BE /* rank1.png */; };
+		074CB32A176CD0310090E4BE /* rank2.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB325176CD0310090E4BE /* rank2.png */; };
+		074CB32B176CD0310090E4BE /* rank3.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB326176CD0310090E4BE /* rank3.png */; };
+		074CB32C176CD0310090E4BE /* rank4.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB327176CD0310090E4BE /* rank4.png */; };
 		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
 		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
 		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
@@ -80,6 +85,11 @@
 		074CB31C176CC4110090E4BE /* apply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apply.png; sourceTree = "<group>"; };
 		074CB31F176CC4320090E4BE /* scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scroll.png; sourceTree = "<group>"; };
 		074CB321176CCE810090E4BE /* mentor_list_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentor_list_caption.png; sourceTree = "<group>"; };
+		074CB323176CD0310090E4BE /* rank0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank0.png; sourceTree = "<group>"; };
+		074CB324176CD0310090E4BE /* rank1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank1.png; sourceTree = "<group>"; };
+		074CB325176CD0310090E4BE /* rank2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank2.png; sourceTree = "<group>"; };
+		074CB326176CD0310090E4BE /* rank3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank3.png; sourceTree = "<group>"; };
+		074CB327176CD0310090E4BE /* rank4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank4.png; sourceTree = "<group>"; };
 		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -260,6 +270,11 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				074CB323176CD0310090E4BE /* rank0.png */,
+				074CB324176CD0310090E4BE /* rank1.png */,
+				074CB325176CD0310090E4BE /* rank2.png */,
+				074CB326176CD0310090E4BE /* rank3.png */,
+				074CB327176CD0310090E4BE /* rank4.png */,
 				074CB321176CCE810090E4BE /* mentor_list_caption.png */,
 				074CB31B176CC4110090E4BE /* apply_selected.png */,
 				074CB31C176CC4110090E4BE /* apply.png */,
@@ -390,6 +405,11 @@
 				074CB31E176CC4110090E4BE /* apply.png in Resources */,
 				074CB320176CC4320090E4BE /* scroll.png in Resources */,
 				074CB322176CCE810090E4BE /* mentor_list_caption.png in Resources */,
+				074CB328176CD0310090E4BE /* rank0.png in Resources */,
+				074CB329176CD0310090E4BE /* rank1.png in Resources */,
+				074CB32A176CD0310090E4BE /* rank2.png in Resources */,
+				074CB32B176CD0310090E4BE /* rank3.png in Resources */,
+				074CB32C176CD0310090E4BE /* rank4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

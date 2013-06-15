@@ -16,6 +16,7 @@ typedef enum {
 @interface DTUser : NSObject <NSCoding>
 
 - (NSString *)sinatureBytes;
+- (UIImage *)titleImage;
 + (DTUser *)userWithDictionary:(NSDictionary *)dict;
 
 @property(readwrite) NSInteger primaryKey;

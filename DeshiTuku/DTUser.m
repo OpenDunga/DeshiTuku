@@ -86,4 +86,15 @@
     return stringBuffer;
 }
 
+- (UIImage *)titleImage {
+    NSArray *names = @[@"センセイ", @"シショウ", @"メイジン", @"タツジン", @"センセイマスター"];
+    if ([names containsObject:self.title]) {
+        int index = [names indexOfObject:self.title];
+        NSString *imageName = [NSString stringWithFormat:@"rank%d.png", index];
+        return [UIImage imageNamed:imageName];
+    }
+    NSString *imageName = @"rank0.png";
+    return [UIImage imageNamed:imageName];
+}
+
 @end

@@ -38,6 +38,7 @@
     UILabel *profileLabel = (UILabel *)[self.view viewWithTag:4];
     
     signatureView.image = self.mentor.signature;
+    titleView.image = self.mentor.titleImage;
     ageLabel.text = [NSString stringWithFormat:@"%d", self.mentor.age];
     profileLabel.text = self.mentor.profile;
 }
