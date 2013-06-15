@@ -67,8 +67,10 @@
 #pragma mark UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [[DTUserManager sharedManager] resetUser];
-    [self updateStartButton];
+    if (buttonIndex == 1) {
+        [[DTUserManager sharedManager] resetUser];
+        [self updateStartButton];
+    }
 }
 
 #pragma mark private

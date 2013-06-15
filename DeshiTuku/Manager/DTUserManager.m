@@ -106,6 +106,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
 - (void)resetUser {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:nil forKey:kCurrentUserKey];
+    [ud synchronize];
     _currentUser = nil;
 }
 
