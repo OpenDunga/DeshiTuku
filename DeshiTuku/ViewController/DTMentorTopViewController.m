@@ -59,11 +59,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.disciples == nil) {
         return 0;
+    } else if ([self.disciples count] == 0) {
+        return 1;
     }
     return [self.disciples count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.disciples && [self.disciples count] == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NoDiscipleCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     DTUser *user = [self.disciples objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscipleCell"];
     UIImageView *signatureView = (UIImageView *)[cell viewWithTag:1];
@@ -76,6 +83,9 @@
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.disciples && [self.disciples count] == 0) {
+        return;
+    }
     DTUser *user = [self.disciples objectAtIndex:indexPath.row];
     MFMailComposeViewController *mailPicker = [[MFMailComposeViewController alloc] init];
     mailPicker.mailComposeDelegate = self;

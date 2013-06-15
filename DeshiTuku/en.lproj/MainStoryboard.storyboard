@@ -653,6 +653,21 @@
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="NoDiscipleCell" id="dlZ-NF-xwS">
+                                        <rect key="frame" x="0.0" y="222" width="668" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="668" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="no_disciple.png" id="twJ-xX-os6">
+                                                    <rect key="frame" x="54" y="69" width="560" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="KCT-0E-4Gk" id="wSJ-f5-RDH"/>
@@ -700,6 +715,7 @@
         <image name="mentor_top_caption.png" width="939" height="154"/>
         <image name="next.png" width="375" height="386"/>
         <image name="next_pressed.png" width="375" height="386"/>
+        <image name="no_disciple.png" width="560" height="62"/>
         <image name="profile_caption.png" width="908" height="70"/>
         <image name="scroll.png" width="674" height="369"/>
         <image name="thanks.png" width="717" height="192"/>
