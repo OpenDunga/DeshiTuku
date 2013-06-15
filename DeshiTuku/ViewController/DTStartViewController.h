@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTStartViewController : UIViewController
+@interface DTStartViewController : UIViewController <UIAlertViewDelegate>
 
 - (IBAction)onStartButtonPressed:(id)sender;
 - (IBAction)onResetButtonPressed:(id)sender;
 
 @property(readwrite, nonatomic) IBOutlet UIButton *startButton;
+@property(readwrite, nonatomic) IBOutlet UIButton *resetButton;
 
 @end

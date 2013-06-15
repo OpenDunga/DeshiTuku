@@ -54,6 +54,16 @@
 }
 
 - (void)onResetButtonPressed:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"データの削除"
+                                                        message:@"端末に保存されているデータを削除します。よろしいですか。"
+                                                       delegate:self cancelButtonTitle:@"キャンセル"
+                                              otherButtonTitles:@"削除", nil];
+    [alertView show];
+}
+
+#pragma mark UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [[DTUserManager sharedManager] resetUser];
     [self updateStartButton];
 }
@@ -68,6 +78,9 @@
         self.startButton.titleLabel.text = @"弟子を取る";
     } else if (user.type == DTUserTypeDisciple) {
         self.startButton.titleLabel.text = @"教えを請う";
+    }
+    if (user == nil) {
+        [self.resetButton setHidden:YES];
     }
 }
 
