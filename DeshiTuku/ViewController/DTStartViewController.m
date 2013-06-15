@@ -75,12 +75,12 @@
 
 - (void)updateStartButton {
     DTUser *user = [[DTUserManager sharedManager] loadUser];
-    if (user == nil) {
-        self.startButton.titleLabel.text = @"新規作成";
-    } else if (user.type == DTUserTypeMentor) {
-        self.startButton.titleLabel.text = @"弟子を取る";
-    } else if (user.type == DTUserTypeDisciple) {
-        self.startButton.titleLabel.text = @"教えを請う";
+    if (user != nil) {
+        if (user.type == DTUserTypeMentor) {
+            [self.startButton setImage:[UIImage imageNamed:@"title_mentor.png"] forState:UIControlStateNormal];
+        } else if (user.type == DTUserTypeDisciple) {
+            [self.startButton setImage:[UIImage imageNamed:@"title_disciple.png"] forState:UIControlStateNormal];
+        }
     }
     if (user) {
         NSLog(@"pk = %d", user.primaryKey);
