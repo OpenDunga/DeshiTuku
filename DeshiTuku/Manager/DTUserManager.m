@@ -159,4 +159,24 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     [queue addOperation:operation];    
 }
 
+- (void)thankMentor:(DTUser *)mentor from:(DTUser *)disciple success:(void (^)(DTUser *))success {
+    NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                     path:@"thanks.php"
+                                               parameters:@{@"mentor_pk" : [NSNumber numberWithInt:mentor.primaryKey],
+                             @"disciple_pk" : [NSNumber numberWithInt:disciple.primaryKey]}];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                            mentor.likes += 1;
+                                                                                            success(mentor);
+                                                                                        }
+                                                                                        failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                            NSLog(@"fail");
+                                                                                        }];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [queue addOperation:operation];
+    
+}
+
 @end

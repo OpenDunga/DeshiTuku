@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSLog(@"isMentor = %d", self.mentor.isMentor);
+    // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -51,11 +52,19 @@
 
 - (void)onApplyButtonPressed:(id)sender {
     DTUserManager *manager = [DTUserManager sharedManager];
-    [manager applyMentor:self.mentor
-                disciple:[manager currentUser]
-                 success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                     [self.navigationController popViewControllerAnimated:YES];
-                 }];
+    if (self.mentor.isMentor) {
+        [manager thankMentor:self.mentor
+                        from:[manager currentUser]
+                     success:^(DTUser *mentor) {
+                         [self.navigationController popViewControllerAnimated:YES];
+                     }];
+    } else {
+        [manager applyMentor:self.mentor
+                    disciple:[manager currentUser]
+                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                         [self.navigationController popViewControllerAnimated:YES];
+                     }];
+    }
 }
 
 - (void)onBackButtonPressed:(id)sender {

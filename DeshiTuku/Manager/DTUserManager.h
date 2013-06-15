@@ -25,7 +25,9 @@
 - (void)fetchMentorList:(DTUser *)disciple;
 - (void)fetchDisciplesList:(DTUser *)mentor
                    success:(void (^)(NSArray *disciples))success;
+- (void)thankMentor:(DTUser *)mentor from:(DTUser *)disciple
+            success:(void (^)(DTUser *mentor))success;
 
-@property (readwrite, nonatomic) NSArray *mentors;
+@property (readwrite, nonatomic) NSArray *mentors ;
 
 @end
