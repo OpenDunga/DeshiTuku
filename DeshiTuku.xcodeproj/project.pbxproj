@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		074323BE176CFEBF0002D14A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074323BD176CFEBF0002D14A /* MessageUI.framework */; };
+		074323C0176D0CA30002D14A /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 074323BF176D0CA30002D14A /* clear.png */; };
 		074CB2FE176C82D60090E4BE /* name_input.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB2FD176C82D60090E4BE /* name_input.png */; };
 		074CB300176C863B0090E4BE /* name_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB2FF176C863B0090E4BE /* name_caption.png */; };
 		074CB302176C88B80090E4BE /* profile_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 074CB301176C88B80090E4BE /* profile_caption.png */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		074323BD176CFEBF0002D14A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		074323BF176D0CA30002D14A /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
 		074CB2FD176C82D60090E4BE /* name_input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name_input.png; sourceTree = "<group>"; };
 		074CB2FF176C863B0090E4BE /* name_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name_caption.png; sourceTree = "<group>"; };
 		074CB301176C88B80090E4BE /* profile_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_caption.png; sourceTree = "<group>"; };
@@ -184,7 +186,6 @@
 		07A71F2D176C13F800BA8EF6 = {
 			isa = PBXGroup;
 			children = (
-				074323BD176CFEBF0002D14A /* MessageUI.framework */,
 				07A71F3F176C13F800BA8EF6 /* DeshiTuku */,
 				07A71F38176C13F800BA8EF6 /* Frameworks */,
 				07A71F37176C13F800BA8EF6 /* Products */,
@@ -203,6 +204,7 @@
 		07A71F38176C13F800BA8EF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				074323BD176CFEBF0002D14A /* MessageUI.framework */,
 				07A71F39176C13F800BA8EF6 /* UIKit.framework */,
 				07A71F3B176C13F800BA8EF6 /* Foundation.framework */,
 				07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */,
@@ -293,6 +295,7 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				074323BF176D0CA30002D14A /* clear.png */,
 				07FAAD3C176CF597005FE40F /* disciple_list_caption.png */,
 				07A71FC9176C79D200BA8EF6 /* age_caption.png */,
 				074CB31C176CC4110090E4BE /* apply.png */,
@@ -451,6 +454,7 @@
 				074CB33F176CECBA0090E4BE /* mentor_top_caption.png in Resources */,
 				07FAAD3A176CEF54005FE40F /* topic_caption.png in Resources */,
 				07FAAD3D176CF597005FE40F /* disciple_list_caption.png in Resources */,
+				074323C0176D0CA30002D14A /* clear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

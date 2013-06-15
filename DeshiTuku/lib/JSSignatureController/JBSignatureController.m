@@ -144,7 +144,11 @@ delegate = delegate_;
     
     [self.nextButton removeFromSuperview];
     [self.view addSubview:self.nextButton];
-    [self.nextButton setFrame:CGRectMake(290, 406, 188, 193)];
+    [self.nextButton setFrame:CGRectMake(449, 415, 188, 193)];
+    
+    [self.clearButton removeFromSuperview];
+    [self.view addSubview:self.clearButton];
+    [self.clearButton setFrame:CGRectMake(144, 415, 188, 193)];
     
     // Buttons
     //[self.view addSubview:self.cancelButton];
@@ -235,6 +239,10 @@ delegate = delegate_;
     }
     
     [self.signatureView clearSignature];
+}
+
+- (IBAction)clearButtonPressed:(id)sender {
+    [self clearSignature];
 }
 
 

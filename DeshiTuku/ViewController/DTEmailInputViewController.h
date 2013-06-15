@@ -11,6 +11,7 @@
 @interface DTEmailInputViewController : UIViewController <UITextFieldDelegate>
 
 - (IBAction)nextButtonPressed:(id)sender;
+
 @property (readwrite, nonatomic) IBOutlet UITextField *textField;
 
 @end
