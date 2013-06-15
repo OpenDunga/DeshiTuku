@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Of8-tz-Ezn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4491" y="-598"/>
+            <point key="canvasLocation" x="-4179" y="234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4">
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3434" y="-455"/>
+            <point key="canvasLocation" x="-3314" y="249"/>
         </scene>
         <!--Age Input View Controller-->
         <scene sceneID="zas-l3-xgz">
@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="623" id="wyC-Aa-n2R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="288"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="Vad-Z4-Lxi" id="LDk-Va-fmq"/>
                                 </connections>
@@ -119,11 +119,12 @@
                     <navigationItem key="navigationItem" id="1xG-mQ-zM0"/>
                     <connections>
                         <segue destination="vEq-a0-ZVT" kind="push" identifier="DTTopicInputSegue" id="Oha-DB-Suk"/>
+                        <segue destination="T3Q-Nq-73V" kind="push" identifier="DTEmailInputSegue" id="7lC-N1-6Xt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nj7-n2-4Xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="-344"/>
+            <point key="canvasLocation" x="218" y="298"/>
         </scene>
         <!--Topic View Controller-->
         <scene sceneID="IXe-Aw-ztl">
@@ -167,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYj-Di-Sfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344" y="-280"/>
+            <point key="canvasLocation" x="1336" y="-408"/>
         </scene>
         <!--Profile Input View Controller-->
         <scene sceneID="dvE-NV-2Fg">
@@ -221,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-SZ-s3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="-302"/>
+            <point key="canvasLocation" x="2324" y="-382"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rg0-FN-PzD">
@@ -288,7 +289,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hYU-U8-3Gz" kind="push" id="Imc-fq-lUt"/>
+                                    <segue destination="hYU-U8-3Gz" kind="push" id="Hj9-4u-fpx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -300,19 +301,79 @@
                             <constraint firstItem="P6m-Zh-eOg" firstAttribute="top" secondItem="mqW-dI-3cM" secondAttribute="top" constant="227" id="Ig7-2a-gyx"/>
                             <constraint firstAttribute="bottom" secondItem="xhM-wA-ofJ" secondAttribute="bottom" constant="180" id="oBk-tO-05b"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="J4O-kY-67e" appends="YES" id="sjj-KR-1Cf"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="9fa-Q2-G93"/>
-                    <connections>
-                        <segue destination="hYU-U8-3Gz" kind="push" id="fO2-VF-KPg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9c-tx-lQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="J4O-kY-67e"/>
             </objects>
             <point key="canvasLocation" x="-900" y="972"/>
+        </scene>
+        <!--Email Input View Controller-->
+        <scene sceneID="jtr-j4-Nz0">
+            <objects>
+                <viewController id="T3Q-Nq-73V" customClass="DTEmailInputViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NQ-xj-wfc">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="back_scroll.png" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-p0-hL0"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mail_caption.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-jl-qbn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="RiQ-bc-NE9"/>
+                                    <constraint firstAttribute="width" constant="498" id="nDE-ZP-hcU"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="example@kawaz.org" textAlignment="center" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="VPW-eq-zf7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="553" id="3fO-hs-xiN"/>
+                                    <constraint firstAttribute="height" constant="73" id="9QA-CO-dOJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="T3Q-Nq-73V" id="1K1-4Y-q06"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccm-fC-6Vj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="Tqg-1p-rFv"/>
+                                    <constraint firstAttribute="height" constant="193" id="tMC-vv-2pu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="decide.png" backgroundImage="decide_pressed.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="T3Q-Nq-73V" eventType="touchUpInside" id="Ima-5N-bEZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ccm-fC-6Vj" firstAttribute="centerX" secondItem="0cQ-p0-hL0" secondAttribute="centerX" type="default" id="1bF-gL-NNd"/>
+                            <constraint firstItem="VPW-eq-zf7" firstAttribute="top" secondItem="2NQ-xj-wfc" secondAttribute="top" constant="212" id="3mR-2C-arN"/>
+                            <constraint firstItem="VPW-eq-zf7" firstAttribute="leading" secondItem="2NQ-xj-wfc" secondAttribute="leading" constant="129" id="Fur-NU-oGl"/>
+                            <constraint firstItem="0cQ-p0-hL0" firstAttribute="trailing" secondItem="2NQ-xj-wfc" secondAttribute="trailing" type="default" id="NvR-fM-ift"/>
+                            <constraint firstItem="UTO-jl-qbn" firstAttribute="top" secondItem="2NQ-xj-wfc" secondAttribute="top" constant="99" id="ROK-IL-030"/>
+                            <constraint firstItem="ccm-fC-6Vj" firstAttribute="top" secondItem="2NQ-xj-wfc" secondAttribute="top" constant="437" id="ZoG-na-svK"/>
+                            <constraint firstItem="0cQ-p0-hL0" firstAttribute="bottom" secondItem="2NQ-xj-wfc" secondAttribute="bottom" type="default" id="a2D-QK-3GD"/>
+                            <constraint firstItem="0cQ-p0-hL0" firstAttribute="leading" secondItem="2NQ-xj-wfc" secondAttribute="leading" type="default" id="dnb-mR-bFQ"/>
+                            <constraint firstItem="0cQ-p0-hL0" firstAttribute="top" secondItem="2NQ-xj-wfc" secondAttribute="top" type="default" id="jol-uU-GMX"/>
+                            <constraint firstItem="VPW-eq-zf7" firstAttribute="centerX" secondItem="UTO-jl-qbn" secondAttribute="centerX" type="default" id="naL-8j-43A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pgm-rM-MX6"/>
+                    <connections>
+                        <outlet property="textField" destination="VPW-eq-zf7" id="k8t-Ax-HIS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPk-eH-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1336" y="1014"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nZf-5W-yOP">
@@ -387,6 +448,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back_scroll.png" width="1536" height="2048"/>
+        <image name="decide.png" width="375" height="386"/>
+        <image name="decide_pressed.png" width="375" height="386"/>
+        <image name="mail_caption.png" width="997" height="141"/>
         <image name="profile.png" width="1536" height="2048"/>
         <image name="topic.png" width="1536" height="2048"/>
     </resources>
@@ -394,6 +459,13 @@
         <class className="DTAgeInputViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DTAgeInputViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DTEmailInputViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DTEmailInputViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextButtonPressed:"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -427,6 +499,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fO2-VF-KPg"/>
+        <segue reference="Hj9-4u-fpx"/>
     </inferredMetricsTieBreakers>
 </document>

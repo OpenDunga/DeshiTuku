@@ -37,16 +37,22 @@ static NSString *kCurrentUserKey = @"myAccount";
 - (void)registerUser:(DTUser *)user {
     NSURL *url = [NSURL URLWithString:@"http://deshitsuku.dotdister.net/"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-                                                            path:@"/mentor_entry.php"
-                                                      parameters:@{@"age" : [NSNumber numberWithInt:user.age],
-                                    @"profile" : user.profile,
-                                    @"topic_id" : [NSNumber numberWithInt:user.topicID],
-                                    @"signature" : [user sinatureBytes]}];
-
-    NSLog(@"age = %d", user.age);
-    NSLog(@"topic = %d", user.topicID);
-    NSLog(@"profile = %@", user.profile);
+    NSMutableURLRequest *request;
+    if (user.type == DTUserTypeMentor) {
+        request = [httpClient requestWithMethod:@"POST"
+                                           path:@"/mentor_entry.php"
+                                     parameters:@{@"age" : [NSNumber numberWithInt:user.age],
+                   @"profile" : user.profile,
+                   @"topic_id" : [NSNumber numberWithInt:user.topicID],
+                   @"signature" : [user sinatureBytes]}];
+    } else {
+        request = [httpClient requestWithMethod:@"POST"
+                                           path:@"/disciple_entry.php"
+                                     parameters:@{@"age" : [NSNumber numberWithInt:user.age],
+                   @"email" : user.email,
+                   @"signature" : [user sinatureBytes]}];
+        
+    }
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                                                             NSString *uid = ((NSDictionary*)JSON)[@"uid"];
@@ -59,13 +65,6 @@ static NSString *kCurrentUserKey = @"myAccount";
                                                                                         }];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperation:operation];
-    /*
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:(NSURLRequest *)
-                                                                                        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                                                            
-                                                                                        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                                                            NSLog(@"fail");
-                                                                                        }];*/
 }
 
 @end

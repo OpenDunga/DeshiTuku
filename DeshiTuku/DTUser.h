@@ -19,6 +19,7 @@ typedef enum {
 
 @property(readwrite) NSInteger age;
 @property(readwrite) NSString *userID;
+@property(readwrite) NSString *email;
 @property(readwrite, copy) UIImage *signature;
 @property(readwrite, copy) NSString *profile;
 @property(readwrite) NSInteger topicID;

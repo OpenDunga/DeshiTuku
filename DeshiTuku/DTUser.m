@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.profile = @"";
+        self.email = @"";
     }
     return self;
 }
@@ -23,6 +24,7 @@
 - (void)encodeWithCoder:(NSCoder*)coder {
     [coder encodeInteger:self.age forKey:@"age"];
     [coder encodeObject:self.userID forKey:@"userID"];
+    [coder encodeObject:self.email forKey:@"email"];
     // ToDo 画像のNSData化
     NSData *data = UIImagePNGRepresentation(self.signature);
     [coder encodeObject:data forKey:@"signature"];
@@ -35,6 +37,7 @@
     self = [super init];
     if (self) {
         self.age = [decoder decodeIntegerForKey:@"age"];
+        self.email = [decoder decodeObjectForKey:@"email"];
         self.userID = [decoder decodeObjectForKey:@"userID"];
         NSData *data = [decoder decodeObjectForKey:@"signature"];
         self.signature = [UIImage imageWithData:data];

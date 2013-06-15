@@ -17,7 +17,11 @@
     DTUserManager *manager = [DTUserManager sharedManager];
     DTUser *user = [manager currentUser];
     user.signature = signatureImage;
-    [sender performSegueWithIdentifier:@"DTTopicInputSegue" sender:self];
+    if (user.type == DTUserTypeMentor) {
+        [sender performSegueWithIdentifier:@"DTTopicInputSegue" sender:self];
+    } else {
+        [sender performSegueWithIdentifier:@"DTEmailInputSegue" sender:self];
+    }
 }
 
 - (void)signatureCancelled:(JBSignatureController *)sender {

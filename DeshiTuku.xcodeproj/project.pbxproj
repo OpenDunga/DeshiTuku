@@ -33,6 +33,12 @@
 		07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */; };
 		07A71FB8176C57C700BA8EF6 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FB7176C57C700BA8EF6 /* profile.png */; };
 		07A71FBB176C58B000BA8EF6 /* DTProfileInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */; };
+		07A71FBD176C70B800BA8EF6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FBC176C70B800BA8EF6 /* back.png */; };
+		07A71FBF176C70D900BA8EF6 /* mail_caption.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FBE176C70D900BA8EF6 /* mail_caption.png */; };
+		07A71FC1176C728500BA8EF6 /* back_scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FC0176C728500BA8EF6 /* back_scroll.png */; };
+		07A71FC4176C731000BA8EF6 /* decide_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FC2176C731000BA8EF6 /* decide_pressed.png */; };
+		07A71FC5176C731000BA8EF6 /* decide.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71FC3176C731000BA8EF6 /* decide.png */; };
+		07A71FC8176C749400BA8EF6 /* DTEmailInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71FC7176C749400BA8EF6 /* DTEmailInputViewController.m */; };
 		14E604B5A90E448890EC02D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DCB65EA2DE4AD68C1E2659 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +83,13 @@
 		07A71FB7176C57C700BA8EF6 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		07A71FB9176C58B000BA8EF6 /* DTProfileInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProfileInputViewController.h; sourceTree = "<group>"; };
 		07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProfileInputViewController.m; sourceTree = "<group>"; };
+		07A71FBC176C70B800BA8EF6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		07A71FBE176C70D900BA8EF6 /* mail_caption.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_caption.png; sourceTree = "<group>"; };
+		07A71FC0176C728500BA8EF6 /* back_scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_scroll.png; sourceTree = "<group>"; };
+		07A71FC2176C731000BA8EF6 /* decide_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decide_pressed.png; sourceTree = "<group>"; };
+		07A71FC3176C731000BA8EF6 /* decide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = decide.png; sourceTree = "<group>"; };
+		07A71FC6176C749300BA8EF6 /* DTEmailInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTEmailInputViewController.h; sourceTree = "<group>"; };
+		07A71FC7176C749400BA8EF6 /* DTEmailInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTEmailInputViewController.m; sourceTree = "<group>"; };
 		07E89A3AEEA5416DBFAF8C5D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		69DCB65EA2DE4AD68C1E2659 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,6 +218,11 @@
 		07A71FB1176C458800BA8EF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07A71FC2176C731000BA8EF6 /* decide_pressed.png */,
+				07A71FC3176C731000BA8EF6 /* decide.png */,
+				07A71FC0176C728500BA8EF6 /* back_scroll.png */,
+				07A71FBE176C70D900BA8EF6 /* mail_caption.png */,
+				07A71FBC176C70B800BA8EF6 /* back.png */,
 				07A71FB2176C458800BA8EF6 /* topic.png */,
 				07A71FB7176C57C700BA8EF6 /* profile.png */,
 			);
@@ -220,6 +238,8 @@
 				07A71FB5176C462C00BA8EF6 /* DTTopicViewController.m */,
 				07A71FB9176C58B000BA8EF6 /* DTProfileInputViewController.h */,
 				07A71FBA176C58B000BA8EF6 /* DTProfileInputViewController.m */,
+				07A71FC6176C749300BA8EF6 /* DTEmailInputViewController.h */,
+				07A71FC7176C749400BA8EF6 /* DTEmailInputViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -289,6 +309,11 @@
 				07A71F9F176C3BB900BA8EF6 /* bg-signature-portrait@2x.png in Resources */,
 				07A71FB3176C458800BA8EF6 /* topic.png in Resources */,
 				07A71FB8176C57C700BA8EF6 /* profile.png in Resources */,
+				07A71FBD176C70B800BA8EF6 /* back.png in Resources */,
+				07A71FBF176C70D900BA8EF6 /* mail_caption.png in Resources */,
+				07A71FC1176C728500BA8EF6 /* back_scroll.png in Resources */,
+				07A71FC4176C731000BA8EF6 /* decide_pressed.png in Resources */,
+				07A71FC5176C731000BA8EF6 /* decide.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +367,7 @@
 				07A71FB0176C441D00BA8EF6 /* DTTopicManager.m in Sources */,
 				07A71FB6176C462C00BA8EF6 /* DTTopicViewController.m in Sources */,
 				07A71FBB176C58B000BA8EF6 /* DTProfileInputViewController.m in Sources */,
+				07A71FC8176C749400BA8EF6 /* DTEmailInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
