@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F39176C13F800BA8EF6 /* UIKit.framework */; };
+		07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3B176C13F800BA8EF6 /* Foundation.framework */; };
+		07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */; };
+		07A71F44176C13F800BA8EF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F42176C13F800BA8EF6 /* InfoPlist.strings */; };
+		07A71F46176C13F800BA8EF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F45176C13F800BA8EF6 /* main.m */; };
+		07A71F4A176C13F800BA8EF6 /* DTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F49176C13F800BA8EF6 /* DTAppDelegate.m */; };
+		07A71F4C176C13F800BA8EF6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F4B176C13F800BA8EF6 /* Default.png */; };
+		07A71F4E176C13F800BA8EF6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F4D176C13F800BA8EF6 /* Default@2x.png */; };
+		07A71F50176C13F800BA8EF6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F4F176C13F800BA8EF6 /* Default-568h@2x.png */; };
+		07A71F53176C13F800BA8EF6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A71F51176C13F800BA8EF6 /* MainStoryboard.storyboard */; };
+		07A71F56176C13F800BA8EF6 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A71F55176C13F800BA8EF6 /* DTViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07A71F36176C13F800BA8EF6 /* DeshiTuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeshiTuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A71F39176C13F800BA8EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07A71F3B176C13F800BA8EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07A71F41176C13F800BA8EF6 /* DeshiTuku-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeshiTuku-Info.plist"; sourceTree = "<group>"; };
+		07A71F43176C13F800BA8EF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07A71F45176C13F800BA8EF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07A71F47176C13F800BA8EF6 /* DeshiTuku-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeshiTuku-Prefix.pch"; sourceTree = "<group>"; };
+		07A71F48176C13F800BA8EF6 /* DTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppDelegate.h; sourceTree = "<group>"; };
+		07A71F49176C13F800BA8EF6 /* DTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppDelegate.m; sourceTree = "<group>"; };
+		07A71F4B176C13F800BA8EF6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07A71F4D176C13F800BA8EF6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		07A71F4F176C13F800BA8EF6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07A71F52176C13F800BA8EF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		07A71F54176C13F800BA8EF6 /* DTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
+		07A71F55176C13F800BA8EF6 /* DTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07A71F33176C13F800BA8EF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A71F3A176C13F800BA8EF6 /* UIKit.framework in Frameworks */,
+				07A71F3C176C13F800BA8EF6 /* Foundation.framework in Frameworks */,
+				07A71F3E176C13F800BA8EF6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07A71F2D176C13F800BA8EF6 = {
+			isa = PBXGroup;
+			children = (
+				07A71F3F176C13F800BA8EF6 /* DeshiTuku */,
+				07A71F38176C13F800BA8EF6 /* Frameworks */,
+				07A71F37176C13F800BA8EF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07A71F37176C13F800BA8EF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F36176C13F800BA8EF6 /* DeshiTuku.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07A71F38176C13F800BA8EF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F39176C13F800BA8EF6 /* UIKit.framework */,
+				07A71F3B176C13F800BA8EF6 /* Foundation.framework */,
+				07A71F3D176C13F800BA8EF6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07A71F3F176C13F800BA8EF6 /* DeshiTuku */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F48176C13F800BA8EF6 /* DTAppDelegate.h */,
+				07A71F49176C13F800BA8EF6 /* DTAppDelegate.m */,
+				07A71F51176C13F800BA8EF6 /* MainStoryboard.storyboard */,
+				07A71F54176C13F800BA8EF6 /* DTViewController.h */,
+				07A71F55176C13F800BA8EF6 /* DTViewController.m */,
+				07A71F40176C13F800BA8EF6 /* Supporting Files */,
+			);
+			path = DeshiTuku;
+			sourceTree = "<group>";
+		};
+		07A71F40176C13F800BA8EF6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A71F41176C13F800BA8EF6 /* DeshiTuku-Info.plist */,
+				07A71F42176C13F800BA8EF6 /* InfoPlist.strings */,
+				07A71F45176C13F800BA8EF6 /* main.m */,
+				07A71F47176C13F800BA8EF6 /* DeshiTuku-Prefix.pch */,
+				07A71F4B176C13F800BA8EF6 /* Default.png */,
+				07A71F4D176C13F800BA8EF6 /* Default@2x.png */,
+				07A71F4F176C13F800BA8EF6 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07A71F35176C13F800BA8EF6 /* DeshiTuku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A71F59176C13F800BA8EF6 /* Build configuration list for PBXNativeTarget "DeshiTuku" */;
+			buildPhases = (
+				07A71F32176C13F800BA8EF6 /* Sources */,
+				07A71F33176C13F800BA8EF6 /* Frameworks */,
+				07A71F34176C13F800BA8EF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeshiTuku;
+			productName = DeshiTuku;
+			productReference = 07A71F36176C13F800BA8EF6 /* DeshiTuku.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07A71F2E176C13F800BA8EF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = giginet;
+			};
+			buildConfigurationList = 07A71F31176C13F800BA8EF6 /* Build configuration list for PBXProject "DeshiTuku" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07A71F2D176C13F800BA8EF6;
+			productRefGroup = 07A71F37176C13F800BA8EF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07A71F35176C13F800BA8EF6 /* DeshiTuku */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07A71F34176C13F800BA8EF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A71F44176C13F800BA8EF6 /* InfoPlist.strings in Resources */,
+				07A71F4C176C13F800BA8EF6 /* Default.png in Resources */,
+				07A71F4E176C13F800BA8EF6 /* Default@2x.png in Resources */,
+				07A71F50176C13F800BA8EF6 /* Default-568h@2x.png in Resources */,
+				07A71F53176C13F800BA8EF6 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07A71F32176C13F800BA8EF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A71F46176C13F800BA8EF6 /* main.m in Sources */,
+				07A71F4A176C13F800BA8EF6 /* DTAppDelegate.m in Sources */,
+				07A71F56176C13F800BA8EF6 /* DTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07A71F42176C13F800BA8EF6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A71F43176C13F800BA8EF6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07A71F51176C13F800BA8EF6 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07A71F52176C13F800BA8EF6 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07A71F57176C13F800BA8EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		07A71F58176C13F800BA8EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07A71F5A176C13F800BA8EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeshiTuku/DeshiTuku-Prefix.pch";
+				INFOPLIST_FILE = "DeshiTuku/DeshiTuku-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07A71F5B176C13F800BA8EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DeshiTuku/DeshiTuku-Prefix.pch";
+				INFOPLIST_FILE = "DeshiTuku/DeshiTuku-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07A71F31176C13F800BA8EF6 /* Build configuration list for PBXProject "DeshiTuku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A71F57176C13F800BA8EF6 /* Debug */,
+				07A71F58176C13F800BA8EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07A71F59176C13F800BA8EF6 /* Build configuration list for PBXNativeTarget "DeshiTuku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A71F5A176C13F800BA8EF6 /* Debug */,
+				07A71F5B176C13F800BA8EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07A71F2E176C13F800BA8EF6 /* Project object */;
+}
