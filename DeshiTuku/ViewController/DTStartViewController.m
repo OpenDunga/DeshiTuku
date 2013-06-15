@@ -33,7 +33,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateStartButton];
-    [[DTUserManager sharedManager] fetchMentorList];
+    DTUser *user = [[DTUserManager sharedManager] loadUser];
+    if (user.type == DTUserTypeDisciple) {
+        [[DTUserManager sharedManager] fetchMentorList:user];
+    }
 }
 
 - (void)didReceiveMemoryWarning

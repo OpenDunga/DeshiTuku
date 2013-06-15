@@ -93,6 +93,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                                                             NSLog(@"success");
+                                                                                            mentor.isMentor = YES;
                                                                                             success(request, response, JSON);
                                                                                         }
                                                                                         failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -108,17 +109,18 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     _currentUser = nil;
 }
 
-- (void)fetchMentorList {
+- (void)fetchMentorList:(DTUser *)disciple {
     NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSURLRequest *request = [httpClient requestWithMethod:@"GET"
                                                      path:@"mentors.php"
-                                               parameters:nil];
+                                               parameters:@{@"disciple_pk" : [NSNumber numberWithInt:disciple.primaryKey]}];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                                                             NSMutableArray *mentors = [NSMutableArray array];
                                                                                             for (NSDictionary *dict in JSON) {
                                                                                                 DTUser *user = [DTUser userWithDictionary:dict];
+                                                                                                user.isMentor = [[dict objectForKey:@"is_mentor"] boolValue];
                                                                                                 [mentors addObject:user];
                                                                                             }
                                                                                             self.mentors = mentors;

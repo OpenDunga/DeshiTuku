@@ -39,6 +39,7 @@
 - (void)nextButtonPressed:(id)sender {
     DTUserManager *manager = [DTUserManager sharedManager];
     [manager registerUser:manager.currentUser success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        [manager fetchMentorList:manager.currentUser];
         [self performSegueWithIdentifier:@"DTDiscipleRegisterSegue" sender:self];
     }];
 }

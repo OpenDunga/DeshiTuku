@@ -22,6 +22,7 @@ typedef enum {
 @property(readwrite) NSInteger primaryKey;
 @property(readwrite) NSInteger age;
 @property(readwrite) NSInteger likes;
+@property(readwrite) BOOL isMentor;
 @property(readwrite) NSInteger averageAge;
 @property(readwrite) NSString *userID;
 @property(readwrite) NSString *email;

@@ -39,6 +39,7 @@
     [coder encodeInteger:self.primaryKey forKey:@"primaryKey"];
     [coder encodeInteger:self.age forKey:@"age"];
     [coder encodeInteger:self.averageAge forKey:@"averageAge"];
+    [coder encodeBool:self.isMentor forKey:@"isMentor"];
     [coder encodeInteger:self.likes forKey:@"likes"];
     [coder encodeObject:self.userID forKey:@"userID"];
     [coder encodeObject:self.email forKey:@"email"];
@@ -58,6 +59,7 @@
         self.age = [decoder decodeIntegerForKey:@"age"];
         self.likes = [decoder decodeIntegerForKey:@"likes"];
         self.averageAge = [decoder decodeIntegerForKey:@"averageAge"];
+        self.isMentor = [decoder decodeBoolForKey:@"isMentor"];
         self.email = [decoder decodeObjectForKey:@"email"];
         self.userID = [decoder decodeObjectForKey:@"userID"];
         NSData *data = [decoder decodeObjectForKey:@"signature"];
