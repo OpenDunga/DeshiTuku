@@ -110,7 +110,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
     _currentUser = nil;
 }
 
-- (void)fetchMentorList:(DTUser *)disciple {
+- (void)fetchMentorList:(DTUser *)disciple success:(void (^)(NSArray *))success {
     NSURL *url = [NSURL URLWithString:(NSString *)baseURL];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSURLRequest *request = [httpClient requestWithMethod:@"GET"
@@ -125,6 +125,7 @@ static NSString *baseURL = @"http://deshitsuku.dotdister.net/";
                                                                                                 [mentors addObject:user];
                                                                                             }
                                                                                             self.mentors = mentors;
+                                                                                            success(mentors);
     }
                                                                                         failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
                                                                                             NSLog(@"fail");

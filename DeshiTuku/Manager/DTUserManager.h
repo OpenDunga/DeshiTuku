@@ -22,7 +22,8 @@
 - (void)applyMentor:(DTUser *)mentor
            disciple:(DTUser *)disciple
             success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON))success;
-- (void)fetchMentorList:(DTUser *)disciple;
+- (void)fetchMentorList:(DTUser *)disciple
+                success:(void (^)(NSArray *mentors))success;
 - (void)fetchDisciplesList:(DTUser *)mentor
                    success:(void (^)(NSArray *disciples))success;
 - (void)thankMentor:(DTUser *)mentor from:(DTUser *)disciple

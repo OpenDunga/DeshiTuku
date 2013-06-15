@@ -35,7 +35,9 @@
     [self updateStartButton];
     DTUser *user = [[DTUserManager sharedManager] loadUser];
     if (user.type == DTUserTypeDisciple) {
-        [[DTUserManager sharedManager] fetchMentorList:user];
+        [[DTUserManager sharedManager] fetchMentorList:user success:^(NSArray *mentors) {
+            
+        }];
     }
 }
 
