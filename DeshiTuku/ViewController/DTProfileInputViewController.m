@@ -42,8 +42,6 @@
 }
 
 - (IBAction)onNextPressed:(id)sender {
-    NSLog(@"pressed");
-    
     DTUserManager *manager = [DTUserManager sharedManager];
     [manager registerUser:manager.currentUser];
 }
